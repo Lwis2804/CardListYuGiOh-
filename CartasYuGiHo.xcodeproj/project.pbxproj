@@ -13,6 +13,21 @@
 		AA5C7DFA2AF0553600EE4965 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA5C7DF82AF0553600EE4965 /* Main.storyboard */; };
 		AA5C7DFC2AF0553A00EE4965 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA5C7DFB2AF0553A00EE4965 /* Assets.xcassets */; };
 		AA5C7DFF2AF0553A00EE4965 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA5C7DFD2AF0553A00EE4965 /* LaunchScreen.storyboard */; };
+		AA5C7E102AF0574000EE4965 /* Card_prices.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5C7E0C2AF0574000EE4965 /* Card_prices.swift */; };
+		AA5C7E112AF0574000EE4965 /* Card_sets.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5C7E0D2AF0574000EE4965 /* Card_sets.swift */; };
+		AA5C7E122AF0574000EE4965 /* Card_images.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5C7E0E2AF0574000EE4965 /* Card_images.swift */; };
+		AA5C7E142AF0575C00EE4965 /* CardResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5C7E132AF0575C00EE4965 /* CardResponse.swift */; };
+		AA5C7E182AF058F200EE4965 /* CardsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5C7E162AF058F200EE4965 /* CardsListViewController.swift */; };
+		AA5C7E192AF058F200EE4965 /* CardsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA5C7E172AF058F200EE4965 /* CardsListViewController.xib */; };
+		AA5C7E1B2AF0592100EE4965 /* ExtensionCardsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5C7E1A2AF0592100EE4965 /* ExtensionCardsList.swift */; };
+		AA5C7E1F2AF0595D00EE4965 /* DetailCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5C7E1D2AF0595D00EE4965 /* DetailCardViewController.swift */; };
+		AA5C7E202AF0595D00EE4965 /* DetailCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA5C7E1E2AF0595D00EE4965 /* DetailCardViewController.xib */; };
+		AA5C7E232AF05B4600EE4965 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5C7E222AF05B4600EE4965 /* TabBarViewController.swift */; };
+		AA5C7E272AF0796700EE4965 /* CardListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5C7E252AF0796700EE4965 /* CardListTableViewCell.swift */; };
+		AA5C7E282AF0796700EE4965 /* CardListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA5C7E262AF0796700EE4965 /* CardListTableViewCell.xib */; };
+		AA5C7E2A2AF07B1300EE4965 /* Extensiones.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5C7E292AF07B1300EE4965 /* Extensiones.swift */; };
+		AA5C7E2C2AF083DA00EE4965 /* Cards_WS.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5C7E2B2AF083DA00EE4965 /* Cards_WS.swift */; };
+		AAF087B62AF0AB8A001EA0FC /* DataCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF087B52AF0AB8A001EA0FC /* DataCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +39,21 @@
 		AA5C7DFB2AF0553A00EE4965 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA5C7DFE2AF0553A00EE4965 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA5C7E002AF0553A00EE4965 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA5C7E0C2AF0574000EE4965 /* Card_prices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card_prices.swift; sourceTree = "<group>"; };
+		AA5C7E0D2AF0574000EE4965 /* Card_sets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card_sets.swift; sourceTree = "<group>"; };
+		AA5C7E0E2AF0574000EE4965 /* Card_images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card_images.swift; sourceTree = "<group>"; };
+		AA5C7E132AF0575C00EE4965 /* CardResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardResponse.swift; sourceTree = "<group>"; };
+		AA5C7E162AF058F200EE4965 /* CardsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsListViewController.swift; sourceTree = "<group>"; };
+		AA5C7E172AF058F200EE4965 /* CardsListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardsListViewController.xib; sourceTree = "<group>"; };
+		AA5C7E1A2AF0592100EE4965 /* ExtensionCardsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionCardsList.swift; sourceTree = "<group>"; };
+		AA5C7E1D2AF0595D00EE4965 /* DetailCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCardViewController.swift; sourceTree = "<group>"; };
+		AA5C7E1E2AF0595D00EE4965 /* DetailCardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailCardViewController.xib; sourceTree = "<group>"; };
+		AA5C7E222AF05B4600EE4965 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		AA5C7E252AF0796700EE4965 /* CardListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListTableViewCell.swift; sourceTree = "<group>"; };
+		AA5C7E262AF0796700EE4965 /* CardListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardListTableViewCell.xib; sourceTree = "<group>"; };
+		AA5C7E292AF07B1300EE4965 /* Extensiones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensiones.swift; sourceTree = "<group>"; };
+		AA5C7E2B2AF083DA00EE4965 /* Cards_WS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cards_WS.swift; sourceTree = "<group>"; };
+		AAF087B52AF0AB8A001EA0FC /* DataCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +86,12 @@
 		AA5C7DF12AF0553600EE4965 /* CartasYuGiHo */ = {
 			isa = PBXGroup;
 			children = (
+				AA5C7E062AF0569E00EE4965 /* Services  */,
+				AA5C7E082AF056BC00EE4965 /* Extesiones */,
+				AA5C7E072AF056AE00EE4965 /* ModelData */,
+				AA5C7E242AF0791900EE4965 /* TableCells */,
+				AA5C7E212AF05B0800EE4965 /* TapBarController */,
+				AA5C7E092AF056DE00EE4965 /* Vistas */,
 				AA5C7DF22AF0553600EE4965 /* AppDelegate.swift */,
 				AA5C7DF42AF0553600EE4965 /* SceneDelegate.swift */,
 				AA5C7DF62AF0553600EE4965 /* ViewController.swift */,
@@ -65,6 +101,87 @@
 				AA5C7E002AF0553A00EE4965 /* Info.plist */,
 			);
 			path = CartasYuGiHo;
+			sourceTree = "<group>";
+		};
+		AA5C7E062AF0569E00EE4965 /* Services  */ = {
+			isa = PBXGroup;
+			children = (
+				AA5C7E2B2AF083DA00EE4965 /* Cards_WS.swift */,
+			);
+			path = "Services ";
+			sourceTree = "<group>";
+		};
+		AA5C7E072AF056AE00EE4965 /* ModelData */ = {
+			isa = PBXGroup;
+			children = (
+				AA5C7E0A2AF0571F00EE4965 /* Response */,
+			);
+			path = ModelData;
+			sourceTree = "<group>";
+		};
+		AA5C7E082AF056BC00EE4965 /* Extesiones */ = {
+			isa = PBXGroup;
+			children = (
+				AA5C7E292AF07B1300EE4965 /* Extensiones.swift */,
+			);
+			path = Extesiones;
+			sourceTree = "<group>";
+		};
+		AA5C7E092AF056DE00EE4965 /* Vistas */ = {
+			isa = PBXGroup;
+			children = (
+				AA5C7E152AF058BB00EE4965 /* CardsListViewController */,
+				AA5C7E1C2AF0593100EE4965 /* DetailCardView */,
+			);
+			path = Vistas;
+			sourceTree = "<group>";
+		};
+		AA5C7E0A2AF0571F00EE4965 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				AA5C7E132AF0575C00EE4965 /* CardResponse.swift */,
+				AAF087B52AF0AB8A001EA0FC /* DataCard.swift */,
+				AA5C7E0D2AF0574000EE4965 /* Card_sets.swift */,
+				AA5C7E0E2AF0574000EE4965 /* Card_images.swift */,
+				AA5C7E0C2AF0574000EE4965 /* Card_prices.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		AA5C7E152AF058BB00EE4965 /* CardsListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AA5C7E162AF058F200EE4965 /* CardsListViewController.swift */,
+				AA5C7E1A2AF0592100EE4965 /* ExtensionCardsList.swift */,
+				AA5C7E172AF058F200EE4965 /* CardsListViewController.xib */,
+			);
+			path = CardsListViewController;
+			sourceTree = "<group>";
+		};
+		AA5C7E1C2AF0593100EE4965 /* DetailCardView */ = {
+			isa = PBXGroup;
+			children = (
+				AA5C7E1D2AF0595D00EE4965 /* DetailCardViewController.swift */,
+				AA5C7E1E2AF0595D00EE4965 /* DetailCardViewController.xib */,
+			);
+			path = DetailCardView;
+			sourceTree = "<group>";
+		};
+		AA5C7E212AF05B0800EE4965 /* TapBarController */ = {
+			isa = PBXGroup;
+			children = (
+				AA5C7E222AF05B4600EE4965 /* TabBarViewController.swift */,
+			);
+			path = TapBarController;
+			sourceTree = "<group>";
+		};
+		AA5C7E242AF0791900EE4965 /* TableCells */ = {
+			isa = PBXGroup;
+			children = (
+				AA5C7E252AF0796700EE4965 /* CardListTableViewCell.swift */,
+				AA5C7E262AF0796700EE4965 /* CardListTableViewCell.xib */,
+			);
+			path = TableCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,7 +242,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA5C7E192AF058F200EE4965 /* CardsListViewController.xib in Resources */,
+				AA5C7E282AF0796700EE4965 /* CardListTableViewCell.xib in Resources */,
 				AA5C7DFF2AF0553A00EE4965 /* LaunchScreen.storyboard in Resources */,
+				AA5C7E202AF0595D00EE4965 /* DetailCardViewController.xib in Resources */,
 				AA5C7DFC2AF0553A00EE4965 /* Assets.xcassets in Resources */,
 				AA5C7DFA2AF0553600EE4965 /* Main.storyboard in Resources */,
 			);
@@ -138,9 +258,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA5C7E102AF0574000EE4965 /* Card_prices.swift in Sources */,
+				AA5C7E1B2AF0592100EE4965 /* ExtensionCardsList.swift in Sources */,
 				AA5C7DF72AF0553600EE4965 /* ViewController.swift in Sources */,
 				AA5C7DF32AF0553600EE4965 /* AppDelegate.swift in Sources */,
+				AA5C7E272AF0796700EE4965 /* CardListTableViewCell.swift in Sources */,
+				AA5C7E2A2AF07B1300EE4965 /* Extensiones.swift in Sources */,
+				AA5C7E232AF05B4600EE4965 /* TabBarViewController.swift in Sources */,
+				AA5C7E182AF058F200EE4965 /* CardsListViewController.swift in Sources */,
 				AA5C7DF52AF0553600EE4965 /* SceneDelegate.swift in Sources */,
+				AA5C7E1F2AF0595D00EE4965 /* DetailCardViewController.swift in Sources */,
+				AA5C7E2C2AF083DA00EE4965 /* Cards_WS.swift in Sources */,
+				AA5C7E112AF0574000EE4965 /* Card_sets.swift in Sources */,
+				AAF087B62AF0AB8A001EA0FC /* DataCard.swift in Sources */,
+				AA5C7E142AF0575C00EE4965 /* CardResponse.swift in Sources */,
+				AA5C7E122AF0574000EE4965 /* Card_images.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +348,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,7 +402,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -294,6 +426,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -301,9 +434,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = MA.CartasYuGiHo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -321,6 +457,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -328,9 +465,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = MA.CartasYuGiHo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
