@@ -23,7 +23,7 @@ class CartasMgicasViewController: UIViewController {
     //MARK: - LIFE · CYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpCardTablelist()
+        setUpCartasMagicas()
         getCardsList()
     }
 
@@ -46,7 +46,7 @@ class CartasMgicasViewController: UIViewController {
         }
     }
      
-    func setUpCardTablelist(){
+    func setUpCartasMagicas(){
         self.cardListTable.dataSource = self
         self.cardListTable.delegate = self
         self.cardListTable.register(CartasMagicasTableViewCell.nib, forCellReuseIdentifier: CartasMagicasTableViewCell.identifier)
