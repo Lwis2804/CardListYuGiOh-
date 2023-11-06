@@ -54,6 +54,7 @@
 		AA8250B42AF9905900AE1A22 /* ExtensionCartasMagicas.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8250B32AF9905900AE1A22 /* ExtensionCartasMagicas.swift */; };
 		AA8250B62AF9956400AE1A22 /* ExtensionCartasTrampa.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8250B52AF9956400AE1A22 /* ExtensionCartasTrampa.swift */; };
 		AA8250B82AF9971E00AE1A22 /* ExtensionCartasFusion.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8250B72AF9971E00AE1A22 /* ExtensionCartasFusion.swift */; };
+		AA8250BA2AF9983300AE1A22 /* ExtensinCartasXYZ.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8250B92AF9983300AE1A22 /* ExtensinCartasXYZ.swift */; };
 		AAF087B62AF0AB8A001EA0FC /* DataCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF087B52AF0AB8A001EA0FC /* DataCard.swift */; };
 /* End PBXBuildFile section */
 
@@ -107,6 +108,7 @@
 		AA8250B32AF9905900AE1A22 /* ExtensionCartasMagicas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionCartasMagicas.swift; sourceTree = "<group>"; };
 		AA8250B52AF9956400AE1A22 /* ExtensionCartasTrampa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionCartasTrampa.swift; sourceTree = "<group>"; };
 		AA8250B72AF9971E00AE1A22 /* ExtensionCartasFusion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionCartasFusion.swift; sourceTree = "<group>"; };
+		AA8250B92AF9983300AE1A22 /* ExtensinCartasXYZ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensinCartasXYZ.swift; sourceTree = "<group>"; };
 		AAF087B52AF0AB8A001EA0FC /* DataCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -283,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				AA8250832AF9862500AE1A22 /* CartasXYZViewController.swift */,
+				AA8250B92AF9983300AE1A22 /* ExtensinCartasXYZ.swift */,
 				AA8250842AF9862500AE1A22 /* CartasXYZViewController.xib */,
 			);
 			path = CartasXYZViewController;
@@ -481,6 +484,7 @@
 				AA8250B62AF9956400AE1A22 /* ExtensionCartasTrampa.swift in Sources */,
 				AA8250B12AF9891B00AE1A22 /* CartasPenduloTableViewCell.swift in Sources */,
 				AA8250892AF9863C00AE1A22 /* CartasPenduloViewController.swift in Sources */,
+				AA8250BA2AF9983300AE1A22 /* ExtensinCartasXYZ.swift in Sources */,
 				AAF087B62AF0AB8A001EA0FC /* DataCard.swift in Sources */,
 				AA5C7E142AF0575C00EE4965 /* CardResponse.swift in Sources */,
 				AA5C7E122AF0574000EE4965 /* Card_images.swift in Sources */,
