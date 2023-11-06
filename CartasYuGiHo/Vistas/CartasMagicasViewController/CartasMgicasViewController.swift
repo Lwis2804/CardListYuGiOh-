@@ -9,21 +9,55 @@ import UIKit
 
 class CartasMgicasViewController: UIViewController {
 
+    
+    //MARK: - OUTLETS
+
+    @IBOutlet weak var backgroundImage: UIView!
+    @IBOutlet weak var cardListTable: UITableView!
+    
+    //MARK: - VARIABLES
+    
+    var arrCartasMagicas: [DataCard] = []
+    
+    
+    //MARK: - LIFE · CYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setUpCardTablelist()
+        getCardsList()
     }
 
+    //MARK: - FUNCTIONS
+    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func getCardsList() {
+        let cardsWS = Cards_WS()
+        cardsWS.getCardResponse { respuesta, error in
+            if error == nil {
+                self.arrCartasMagicas = respuesta?.dataCard ?? []
+                DispatchQueue.main.async {
+                    self.cardListTable.reloadData()
+                }
+            }else {
+                DispatchQueue.main.async {
+                    self.showAlert(WithTitle: "Error", andMessage: "Ocurrio un error en el llamdo a Servicio")
+                }
+            }
+        }
     }
-    */
+     
+    func setUpCardTablelist(){
+        self.cardListTable.dataSource = self
+        self.cardListTable.delegate = self
+        self.cardListTable.register(CartasMagicasTableViewCell.nib, forCellReuseIdentifier: CartasMagicasTableViewCell.identifier)
+    }
+    
+    
+    //MARK: - NAVIGATION
 
+    
+    
+    //MARK: - ACTIONS
+
+    
 }
