@@ -16,8 +16,50 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="308" height="100"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iog-4T-VdK">
+                        <rect key="frame" x="2" y="2" width="304" height="96"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dzt-lM-ab5">
+                                <rect key="frame" x="2" y="2" width="60" height="92"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="JwH-Ij-znP"/>
+                                    <constraint firstAttribute="height" constant="92" id="WEE-lA-On3"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rk3-nw-1lj">
+                                <rect key="frame" x="72" y="2" width="230" height="92"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.47684186699999997" green="0.50480759139999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="rk3-nw-1lj" secondAttribute="trailing" constant="2" id="5ap-H3-ITb"/>
+                            <constraint firstItem="Dzt-lM-ab5" firstAttribute="leading" secondItem="iog-4T-VdK" secondAttribute="leading" constant="2" id="CtQ-qr-WjK"/>
+                            <constraint firstAttribute="bottom" secondItem="rk3-nw-1lj" secondAttribute="bottom" constant="2" id="IbH-4H-95w"/>
+                            <constraint firstAttribute="height" constant="96" id="JFh-vD-Qm6"/>
+                            <constraint firstAttribute="bottom" secondItem="Dzt-lM-ab5" secondAttribute="bottom" constant="2" id="V7x-lY-X9G"/>
+                            <constraint firstItem="rk3-nw-1lj" firstAttribute="leading" secondItem="Dzt-lM-ab5" secondAttribute="trailing" constant="10" id="WZn-HO-mR8"/>
+                            <constraint firstItem="rk3-nw-1lj" firstAttribute="top" secondItem="iog-4T-VdK" secondAttribute="top" constant="2" id="hfm-H7-iNU"/>
+                            <constraint firstItem="Dzt-lM-ab5" firstAttribute="top" secondItem="iog-4T-VdK" secondAttribute="top" constant="2" id="mKg-g9-SgQ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="iog-4T-VdK" secondAttribute="trailing" constant="2" id="BqZ-ZO-yWR"/>
+                    <constraint firstItem="iog-4T-VdK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="Kgk-3g-emY"/>
+                    <constraint firstItem="iog-4T-VdK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="2" id="VWz-hb-eZi"/>
+                    <constraint firstAttribute="bottom" secondItem="iog-4T-VdK" secondAttribute="bottom" constant="2" id="hvb-eS-eGe"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="backgroundImage" destination="iog-4T-VdK" id="VJr-6U-UX1"/>
+                <outlet property="cardImage" destination="Dzt-lM-ab5" id="HsP-Sg-GIa"/>
+                <outlet property="cardName" destination="rk3-nw-1lj" id="XDA-4A-u1B"/>
+            </connections>
             <point key="canvasLocation" x="131" y="-11"/>
         </tableViewCell>
     </objects>

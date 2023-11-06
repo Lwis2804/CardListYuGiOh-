@@ -16,8 +16,50 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="308" height="100"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a6d-WU-Pud">
+                        <rect key="frame" x="2" y="2" width="304" height="96"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aQx-yg-a5Z">
+                                <rect key="frame" x="2" y="2" width="60" height="92"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="KHH-Hy-xYt"/>
+                                    <constraint firstAttribute="height" constant="92" id="WUq-p5-OKO"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rnj-Fh-D2O">
+                                <rect key="frame" x="72" y="2" width="230" height="92"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="aQx-yg-a5Z" firstAttribute="leading" secondItem="a6d-WU-Pud" secondAttribute="leading" constant="2" id="5MW-K3-71z"/>
+                            <constraint firstItem="rnj-Fh-D2O" firstAttribute="leading" secondItem="aQx-yg-a5Z" secondAttribute="trailing" constant="10" id="Ewa-Rt-09I"/>
+                            <constraint firstAttribute="bottom" secondItem="rnj-Fh-D2O" secondAttribute="bottom" constant="2" id="Jz2-vl-omZ"/>
+                            <constraint firstAttribute="bottom" secondItem="aQx-yg-a5Z" secondAttribute="bottom" constant="2" id="MAN-lH-tLy"/>
+                            <constraint firstItem="aQx-yg-a5Z" firstAttribute="top" secondItem="a6d-WU-Pud" secondAttribute="top" constant="2" id="OQP-rQ-qll"/>
+                            <constraint firstAttribute="height" constant="96" id="rlQ-zM-s90"/>
+                            <constraint firstItem="rnj-Fh-D2O" firstAttribute="top" secondItem="a6d-WU-Pud" secondAttribute="top" constant="2" id="saW-hN-VXk"/>
+                            <constraint firstAttribute="trailing" secondItem="rnj-Fh-D2O" secondAttribute="trailing" constant="2" id="t7T-MI-xUl"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="a6d-WU-Pud" secondAttribute="trailing" constant="2" id="1dL-4a-T8N"/>
+                    <constraint firstAttribute="bottom" secondItem="a6d-WU-Pud" secondAttribute="bottom" constant="2" id="HLq-no-Dg4"/>
+                    <constraint firstItem="a6d-WU-Pud" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="2" id="KPJ-QY-mV8"/>
+                    <constraint firstItem="a6d-WU-Pud" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="h8C-F8-p6N"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="backgroundImage" destination="a6d-WU-Pud" id="2u7-u4-IbQ"/>
+                <outlet property="cardImage" destination="aQx-yg-a5Z" id="hNR-Lt-3VU"/>
+                <outlet property="cardName" destination="rnj-Fh-D2O" id="1vt-pp-bXy"/>
+            </connections>
             <point key="canvasLocation" x="131" y="-11"/>
         </tableViewCell>
     </objects>
