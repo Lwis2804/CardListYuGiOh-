@@ -56,6 +56,7 @@
 		AA8250B82AF9971E00AE1A22 /* ExtensionCartasFusion.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8250B72AF9971E00AE1A22 /* ExtensionCartasFusion.swift */; };
 		AA8250BA2AF9983300AE1A22 /* ExtensinCartasXYZ.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8250B92AF9983300AE1A22 /* ExtensinCartasXYZ.swift */; };
 		AA8250BC2AF9995200AE1A22 /* ExtensionCartasPendulo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8250BB2AF9995200AE1A22 /* ExtensionCartasPendulo.swift */; };
+		AA8250BE2AF99A2600AE1A22 /* ExtensionCartasSynchro.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8250BD2AF99A2600AE1A22 /* ExtensionCartasSynchro.swift */; };
 		AAF087B62AF0AB8A001EA0FC /* DataCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF087B52AF0AB8A001EA0FC /* DataCard.swift */; };
 /* End PBXBuildFile section */
 
@@ -111,6 +112,7 @@
 		AA8250B72AF9971E00AE1A22 /* ExtensionCartasFusion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionCartasFusion.swift; sourceTree = "<group>"; };
 		AA8250B92AF9983300AE1A22 /* ExtensinCartasXYZ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensinCartasXYZ.swift; sourceTree = "<group>"; };
 		AA8250BB2AF9995200AE1A22 /* ExtensionCartasPendulo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionCartasPendulo.swift; sourceTree = "<group>"; };
+		AA8250BD2AF99A2600AE1A22 /* ExtensionCartasSynchro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionCartasSynchro.swift; sourceTree = "<group>"; };
 		AAF087B52AF0AB8A001EA0FC /* DataCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -307,6 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				AA82508C2AF9867B00AE1A22 /* CartasSynchroViewController.swift */,
+				AA8250BD2AF99A2600AE1A22 /* ExtensionCartasSynchro.swift */,
 				AA82508D2AF9867B00AE1A22 /* CartasSynchroViewController.xib */,
 			);
 			path = CartasSynchroViewController;
@@ -464,6 +467,7 @@
 				AA5C7E102AF0574000EE4965 /* Card_prices.swift in Sources */,
 				AA5C7E1B2AF0592100EE4965 /* ExtensionCardsList.swift in Sources */,
 				AA8250852AF9862500AE1A22 /* CartasXYZViewController.swift in Sources */,
+				AA8250BE2AF99A2600AE1A22 /* ExtensionCartasSynchro.swift in Sources */,
 				AA5C7DF72AF0553600EE4965 /* ViewController.swift in Sources */,
 				AA82508E2AF9867B00AE1A22 /* CartasSynchroViewController.swift in Sources */,
 				AA5C7DF32AF0553600EE4965 /* AppDelegate.swift in Sources */,
