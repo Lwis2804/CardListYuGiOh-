@@ -53,6 +53,7 @@
 		AA8250B22AF9891B00AE1A22 /* CartasPenduloTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA8250B02AF9891B00AE1A22 /* CartasPenduloTableViewCell.xib */; };
 		AA8250B42AF9905900AE1A22 /* ExtensionCartasMagicas.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8250B32AF9905900AE1A22 /* ExtensionCartasMagicas.swift */; };
 		AA8250B62AF9956400AE1A22 /* ExtensionCartasTrampa.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8250B52AF9956400AE1A22 /* ExtensionCartasTrampa.swift */; };
+		AA8250B82AF9971E00AE1A22 /* ExtensionCartasFusion.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8250B72AF9971E00AE1A22 /* ExtensionCartasFusion.swift */; };
 		AAF087B62AF0AB8A001EA0FC /* DataCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF087B52AF0AB8A001EA0FC /* DataCard.swift */; };
 /* End PBXBuildFile section */
 
@@ -105,6 +106,7 @@
 		AA8250B02AF9891B00AE1A22 /* CartasPenduloTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartasPenduloTableViewCell.xib; sourceTree = "<group>"; };
 		AA8250B32AF9905900AE1A22 /* ExtensionCartasMagicas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionCartasMagicas.swift; sourceTree = "<group>"; };
 		AA8250B52AF9956400AE1A22 /* ExtensionCartasTrampa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionCartasTrampa.swift; sourceTree = "<group>"; };
+		AA8250B72AF9971E00AE1A22 /* ExtensionCartasFusion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionCartasFusion.swift; sourceTree = "<group>"; };
 		AAF087B52AF0AB8A001EA0FC /* DataCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -271,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				AA82507F2AF9860D00AE1A22 /* CartasFusionViewController.swift */,
+				AA8250B72AF9971E00AE1A22 /* ExtensionCartasFusion.swift */,
 				AA8250802AF9860D00AE1A22 /* CartasFusionViewController.xib */,
 			);
 			path = CartasFusionViewController;
@@ -461,6 +464,7 @@
 				AA8250992AF9889F00AE1A22 /* CartasMagicasTableViewCell.swift in Sources */,
 				AA5C7E272AF0796700EE4965 /* CardListTableViewCell.swift in Sources */,
 				AA5C7E2A2AF07B1300EE4965 /* Extensiones.swift in Sources */,
+				AA8250B82AF9971E00AE1A22 /* ExtensionCartasFusion.swift in Sources */,
 				AA5C7E232AF05B4600EE4965 /* TabBarViewController.swift in Sources */,
 				AA5C7E182AF058F200EE4965 /* CardsListViewController.swift in Sources */,
 				AA8250B42AF9905900AE1A22 /* ExtensionCartasMagicas.swift in Sources */,

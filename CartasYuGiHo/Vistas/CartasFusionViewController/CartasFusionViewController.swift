@@ -8,22 +8,55 @@
 import UIKit
 
 class CartasFusionViewController: UIViewController {
+    
+    //MARK: - OUTLETS
 
+    @IBOutlet weak var backgroundImage: UIView!
+    @IBOutlet weak var cardListTable: UITableView!
+    
+    //MARK: - VARIABLES
+    
+    var arrCartasFusion: [DataCard] = []
+    
+    
+    //MARK: - LIFE · CYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setUpCartasFusion()
+        getCardsList()
     }
 
+    //MARK: - FUNCTIONS
+    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func getCardsList() {
+        let cardsWS = Cards_WS()
+        cardsWS.getCardResponse { respuesta, error in
+            if error == nil {
+                self.arrCartasFusion = respuesta?.dataCard ?? []
+                DispatchQueue.main.async {
+                    self.cardListTable.reloadData()
+                }
+            }else {
+                DispatchQueue.main.async {
+                    self.showAlert(WithTitle: "Error", andMessage: "Ocurrio un error en el llamdo a Servicio")
+                }
+            }
+        }
     }
-    */
+     
+    func setUpCartasFusion(){
+        self.cardListTable.dataSource = self
+        self.cardListTable.delegate = self
+        self.cardListTable.register(CartasFusionTableViewCell.nib, forCellReuseIdentifier: CartasFusionTableViewCell.identifier)
+    }
+    
+    
+    //MARK: - NAVIGATION
 
+    
+    
+    //MARK: - ACTIONS
+
+    
 }
