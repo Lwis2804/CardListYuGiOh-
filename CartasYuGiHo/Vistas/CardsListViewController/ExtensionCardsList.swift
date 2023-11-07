@@ -4,13 +4,13 @@ import UIKit
 //MARK: - EXTENSIONS
 extension CardsListViewController : UITableViewDelegate & UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arrCards.count
+        return arrMonster.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cCell = tableView.dequeueReusableCell(withIdentifier: CardListTableViewCell.identifier, for: indexPath) as? CardListTableViewCell ?? CardListTableViewCell()
         
-        cCell.setUpCardList(categoria: arrCards[indexPath.row])
+        cCell.setUpCardList(categoria: arrMonster[indexPath.row])
         return cCell
     }
     

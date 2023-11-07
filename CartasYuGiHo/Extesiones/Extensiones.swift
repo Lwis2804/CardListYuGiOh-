@@ -37,4 +37,12 @@ extension UIViewController {
         alert.addAction(UIAlertAction(title: "Ok", style: .default))
         self.present(alert, animated: true)
     }
+    
+    func getAndSplitCard(with cards: [DataCard], andType type: String) -> [DataCard] {
+        var monsterCard: [DataCard] = []
+        for i in cards {
+            if i.type == type { monsterCard.append(i) }
+        }
+        return monsterCard
+    }    
 }
