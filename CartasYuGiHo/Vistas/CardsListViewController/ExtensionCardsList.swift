@@ -26,27 +26,14 @@ extension CardsListViewController : UITableViewDelegate & UITableViewDataSource 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//MARK: - UICOLLECTIONVIEW DATASOURCE
-
-
-//MARK: - UICOLLECTIONVIEW FLOWLAYOUT
-
-
-
-//MARK: - UITABLEVIEW DELEGATE
+//MARK: - EXTENSIONS · RATE VIEW
+extension CardsListViewController: RateCardViewDelegate {
+    func closeRV() {
+        
+    }
+    
+    func rateCard(with value: String) {
+        print("\n\n\n Me llego este valor de la vista --->  \(value) \n")
+    }
+    
+}

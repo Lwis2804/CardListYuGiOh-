@@ -40,8 +40,8 @@ extension UIViewController {
     
     func getAndSplitCard(with cards: [DataCard], andType type: String) -> [DataCard] {
         var monsterCard: [DataCard] = []
-        for i in cards {
-            if i.type == type { monsterCard.append(i) }
+        for card in cards {
+            if card.type == type { monsterCard.append(card) }
         }
         return monsterCard
     }    

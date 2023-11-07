@@ -1,9 +1,6 @@
-//
 //  CardsListViewController.swift
 //  CartasYuGiHo
-//
 //  Created by LUIS GONZALEZ on 30/10/23.
-//
 
 import UIKit
 
@@ -11,6 +8,7 @@ class CardsListViewController: UIViewController {
     //MARK: - OUTLETS
     @IBOutlet weak var backgroundImage: UIView!
     @IBOutlet weak var cardListTable: UITableView!
+    
     
     //MARK: - VARIABLES
     var arrMonster: [DataCard] = []
@@ -22,8 +20,8 @@ class CardsListViewController: UIViewController {
         setUpCardTablelist()
         getCardsList()
     }
-
-    //MARK: - FUNCTIONS    
+    
+    //MARK: - FUNCTIONS
     private func getCardsList() {
         let cardsWS = Cards_WS()
         cardsWS.getCardResponse { respuesta, error in
@@ -42,17 +40,25 @@ class CardsListViewController: UIViewController {
     
     func getAllMonter(withCards cards:  [DataCard] ) -> [DataCard] {
         var monsterCard: [DataCard] = []
-        for i in cards {
-            if i.type == "Normal Monster" || i.type ==  "Effect Monster" {
-                monsterCard.append(i)
+        for card in cards {
+            if card.type == "Normal Monster" || card.type ==  "Effect Monster" {
+                monsterCard.append(card)
             }
         }
         return monsterCard
     }
-     
+    
     func setUpCardTablelist(){
         self.cardListTable.dataSource = self
         self.cardListTable.delegate = self
         self.cardListTable.register(CardListTableViewCell.nib, forCellReuseIdentifier: CardListTableViewCell.identifier)
     }
+    
+    
+    @IBAction func launchModalRateView(_ sender: Any) {
+        let viewRate = RateCardView.instantiateView()
+        viewRate.rateDelegate = self
+        backgroundImage.addSubview(viewRate)
+    }
+        
 }

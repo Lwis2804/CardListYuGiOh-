@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34E3E9002AF9EF2C00575607 /* RateCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34E3E8FF2AF9EF2C00575607 /* RateCardView.xib */; };
+		34E3E9022AF9EF4700575607 /* RateCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E3E9012AF9EF4700575607 /* RateCardView.swift */; };
 		AA5C7DF32AF0553600EE4965 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5C7DF22AF0553600EE4965 /* AppDelegate.swift */; };
 		AA5C7DF52AF0553600EE4965 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5C7DF42AF0553600EE4965 /* SceneDelegate.swift */; };
 		AA5C7DF72AF0553600EE4965 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5C7DF62AF0553600EE4965 /* ViewController.swift */; };
@@ -61,6 +63,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		34E3E8FF2AF9EF2C00575607 /* RateCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RateCardView.xib; sourceTree = "<group>"; };
+		34E3E9012AF9EF4700575607 /* RateCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateCardView.swift; sourceTree = "<group>"; };
 		AA5C7DEF2AF0553600EE4965 /* CartasYuGiHo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CartasYuGiHo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA5C7DF22AF0553600EE4965 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA5C7DF42AF0553600EE4965 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +131,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34E3E8FD2AF9EF0D00575607 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				34E3E8FE2AF9EF1A00575607 /* RateView */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		34E3E8FE2AF9EF1A00575607 /* RateView */ = {
+			isa = PBXGroup;
+			children = (
+				34E3E8FF2AF9EF2C00575607 /* RateCardView.xib */,
+				34E3E9012AF9EF4700575607 /* RateCardView.swift */,
+			);
+			path = RateView;
+			sourceTree = "<group>";
+		};
 		AA5C7DE62AF0553500EE4965 = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +167,7 @@
 		AA5C7DF12AF0553600EE4965 /* CartasYuGiHo */ = {
 			isa = PBXGroup;
 			children = (
+				34E3E8FD2AF9EF0D00575607 /* Commons */,
 				AA5C7E062AF0569E00EE4965 /* Services  */,
 				AA5C7E082AF056BC00EE4965 /* Extesiones */,
 				AA5C7E072AF056AE00EE4965 /* ModelData */,
@@ -438,6 +460,7 @@
 			files = (
 				AA8250862AF9862500AE1A22 /* CartasXYZViewController.xib in Resources */,
 				AA5C7E192AF058F200EE4965 /* CardsListViewController.xib in Resources */,
+				34E3E9002AF9EF2C00575607 /* RateCardView.xib in Resources */,
 				AA82509A2AF9889F00AE1A22 /* CartasMagicasTableViewCell.xib in Resources */,
 				AA82507D2AF985E600AE1A22 /* CartasTrampaViewController.xib in Resources */,
 				AA82509E2AF988B100AE1A22 /* CartasTrampaTableViewCell.xib in Resources */,
@@ -470,6 +493,7 @@
 				AA8250BE2AF99A2600AE1A22 /* ExtensionCartasSynchro.swift in Sources */,
 				AA5C7DF72AF0553600EE4965 /* ViewController.swift in Sources */,
 				AA82508E2AF9867B00AE1A22 /* CartasSynchroViewController.swift in Sources */,
+				34E3E9022AF9EF4700575607 /* RateCardView.swift in Sources */,
 				AA5C7DF32AF0553600EE4965 /* AppDelegate.swift in Sources */,
 				AA8250992AF9889F00AE1A22 /* CartasMagicasTableViewCell.swift in Sources */,
 				AA5C7E272AF0796700EE4965 /* CardListTableViewCell.swift in Sources */,
