@@ -9,6 +9,7 @@ extension CardsListViewController : UITableViewDelegate & UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cCell = tableView.dequeueReusableCell(withIdentifier: CardListTableViewCell.identifier, for: indexPath) as? CardListTableViewCell ?? CardListTableViewCell()
+        
         cCell.setUpCardList(categoria: arrCards[indexPath.row])
         return cCell
     }

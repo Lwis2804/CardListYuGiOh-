@@ -13,6 +13,7 @@ extension CartasMgicasViewController : UITableViewDelegate & UITableViewDataSour
         return cCell
     }
     
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let goToView = DetailCardViewController()
      //   goToView.recibeDatos = arr[indexPath.row]
