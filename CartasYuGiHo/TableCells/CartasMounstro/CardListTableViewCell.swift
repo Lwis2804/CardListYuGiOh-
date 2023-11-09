@@ -11,7 +11,10 @@ class CardListTableViewCell: UITableViewCell {
     
     
     //MARK: - OUTLETS
-    @IBOutlet weak var backgroundImage: UIView!
+    @IBOutlet weak var backgroundImage: UIView!{
+        didSet{self.backgroundImage.layer.cornerRadius = 10
+        }
+    }
     @IBOutlet weak var cardImage: UIImageView!
     @IBOutlet weak var cardName: UILabel!
     

@@ -18,23 +18,23 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9eu-v3-IGg">
-                        <rect key="frame" x="2" y="2" width="304" height="96"/>
+                        <rect key="frame" x="4" y="2" width="300" height="96"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lg0-UD-vGS">
-                                <rect key="frame" x="2" y="2" width="60" height="92"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hey trunade hola tornado ESP" translatesAutoresizingMaskIntoConstraints="NO" id="Lg0-UD-vGS">
+                                <rect key="frame" x="6" y="2" width="60" height="92"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="IVb-R3-u5I"/>
                                     <constraint firstAttribute="height" constant="92" id="KL8-HA-dGL"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BW8-ba-jTf">
-                                <rect key="frame" x="72" y="2" width="230" height="92"/>
+                                <rect key="frame" x="76" y="2" width="222" height="92"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="0.88608771559999999" green="0.4996563792" blue="0.0106566539" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.99999994039999995" green="0.99999994039999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="BW8-ba-jTf" firstAttribute="leading" secondItem="Lg0-UD-vGS" secondAttribute="trailing" constant="10" id="Ifc-PN-Nqf"/>
                             <constraint firstAttribute="height" constant="96" id="Pep-bC-tN7"/>
@@ -43,24 +43,28 @@
                             <constraint firstAttribute="bottom" secondItem="BW8-ba-jTf" secondAttribute="bottom" constant="2" id="oIY-9B-bDg"/>
                             <constraint firstAttribute="trailing" secondItem="BW8-ba-jTf" secondAttribute="trailing" constant="2" id="pyS-I1-yPa"/>
                             <constraint firstAttribute="bottom" secondItem="Lg0-UD-vGS" secondAttribute="bottom" constant="2" id="vbU-gz-QQY"/>
-                            <constraint firstItem="Lg0-UD-vGS" firstAttribute="leading" secondItem="9eu-v3-IGg" secondAttribute="leading" constant="2" id="zvB-0f-ds2"/>
+                            <constraint firstItem="Lg0-UD-vGS" firstAttribute="leading" secondItem="9eu-v3-IGg" secondAttribute="leading" constant="6" id="zvB-0f-ds2"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="9eu-v3-IGg" secondAttribute="trailing" constant="2" id="2Si-Eb-SW2"/>
+                    <constraint firstAttribute="trailing" secondItem="9eu-v3-IGg" secondAttribute="trailing" constant="4" id="2Si-Eb-SW2"/>
                     <constraint firstAttribute="bottom" secondItem="9eu-v3-IGg" secondAttribute="bottom" constant="2" id="FTV-C3-MIw"/>
-                    <constraint firstItem="9eu-v3-IGg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="2" id="Nkn-hl-lUP"/>
+                    <constraint firstItem="9eu-v3-IGg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="Nkn-hl-lUP"/>
                     <constraint firstItem="9eu-v3-IGg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="xO8-xg-FgX"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" red="0.0048117046240000001" green="0.50054830309999998" blue="0.3988123536" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <connections>
                 <outlet property="backgroundImage" destination="9eu-v3-IGg" id="Nsc-Wa-J6y"/>
                 <outlet property="cardImage" destination="Lg0-UD-vGS" id="z8l-m0-4q0"/>
                 <outlet property="cardName" destination="BW8-ba-jTf" id="3pl-j7-jN4"/>
             </connections>
-            <point key="canvasLocation" x="14" y="-11"/>
+            <point key="canvasLocation" x="13.740458015267174" y="-11.267605633802818"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="hey trunade hola tornado ESP" width="693" height="1013"/>
+    </resources>
 </document>
