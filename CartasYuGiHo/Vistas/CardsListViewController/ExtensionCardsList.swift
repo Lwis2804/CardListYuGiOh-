@@ -16,31 +16,13 @@ extension CardsListViewController : UITableViewDelegate & UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let goToView = DetailCardViewController()
-     //   goToView.recibeDatos = arr[indexPath.row]
+        goToView.recibeCodable = arrCards[indexPath.row]
         navigationController?.pushViewController(goToView, animated: true)
     }
     
     
  
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //MARK: - UICOLLECTIONVIEW DATASOURCE
 

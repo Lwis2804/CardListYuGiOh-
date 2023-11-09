@@ -27,26 +27,62 @@ class DetailCardViewController: UIViewController {
     
     //MARK: - LIFE · CYCLE
     override func viewDidLoad() {
-   //     downloadTask?.cancel()
-   //     downloadTask = nil
+        downloadTask?.cancel()
+        downloadTask = nil
         super.viewDidLoad()
+        
+        switch recibeCodable {
+        case is DataCard:
+             setUpCartasMounstroinf(categoria: recibeCodable as! DataCard)
+        case is DataCard:
+             setUpCartasMagicasInf(categoria: recibeCodable as! DataCard)
+        case is DataCard:
+             setUpCartasTrampaInf(categoria: recibeCodable as! DataCard)
+         default:
+             break
+         }
     }
     
     //MARK: - FUNCTIONS
     
-/*    func setUpPlayingNowInf(categoria : NowPlayingResult){
-        self.lblDateDetail.text = categoria.release_date
-        self.lblMovieTitle.text = categoria.title
-        self.lblGeneroDetail.text = "\(String(describing: categoria.genre_ids))"
-        self.lblDexcriptionMovieDetail.text = categoria.overview
-        self.lblDuracionDetail.text = categoria.original_language
+   func setUpCartasMounstroinf(categoria : DataCard){
+       self.nameCard.text = categoria.name
+       self.typeCard.text = categoria.type
+       self.archetypeCard.text = categoria.archetype
+       self.descriptionCard.text = categoria.desc
+      
         
-        if let urlPoster = categoria.backdrop_path,
-           let url = URL(string: "https://image.tmdb.org/t/p/w500\(urlPoster)"){
-            downloadTask = imgMovieDetail.loadImage(url: url)
+       if let urlPoster = categoria.card_images,
+          let url = URL(string: "\(urlPoster[0].image_url ?? "")"){
+           downloadTask = cardImage.loadImage(url: url)
+       }
         }
-    */
     
+    func setUpCartasMagicasInf(categoria : DataCard){
+        self.nameCard.text = categoria.name
+        self.typeCard.text = categoria.type
+        self.archetypeCard.text = categoria.archetype
+        self.descriptionCard.text = categoria.desc
+       
+         
+        if let urlPoster = categoria.card_images,
+           let url = URL(string: "\(urlPoster[0].image_url ?? "")"){
+            downloadTask = cardImage.loadImage(url: url)
+        }
+         }
+    
+    func setUpCartasTrampaInf(categoria : DataCard){
+        self.nameCard.text = categoria.name
+        self.typeCard.text = categoria.type
+        self.archetypeCard.text = categoria.archetype
+        self.descriptionCard.text = categoria.desc
+       
+         
+        if let urlPoster = categoria.card_images,
+           let url = URL(string: "\(urlPoster[0].image_url ?? "")"){
+            downloadTask = cardImage.loadImage(url: url)
+        }
+         }
     //MARK: - NAVIGATION
 
     

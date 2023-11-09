@@ -16,7 +16,7 @@ extension CartasMgicasViewController : UITableViewDelegate & UITableViewDataSour
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let goToView = DetailCardViewController()
-     //   goToView.recibeDatos = arr[indexPath.row]
+        goToView.recibeCodable = arrCartasMagicas[indexPath.row]
         navigationController?.pushViewController(goToView, animated: true)
     }
     
