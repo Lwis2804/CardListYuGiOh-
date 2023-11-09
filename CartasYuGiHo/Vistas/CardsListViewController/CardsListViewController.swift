@@ -33,7 +33,7 @@ class CardsListViewController: UIViewController {
         let cardsWS = Cards_WS()
         cardsWS.getCardResponse { respuesta, error in
             if error == nil {
-                self.arrCards = respuesta?.dataCard ?? []
+                self.arrCards = self.getAndSplitCard(with: respuesta?.dataCard ?? [], andType: "Normal Monster")
                 DispatchQueue.main.async {
                     self.cardListTable.reloadData()
                 }
@@ -44,6 +44,10 @@ class CardsListViewController: UIViewController {
             }
         }
     }
+    
+    
+    
+    
      
     func setUpCardTablelist(){
         self.cardListTable.dataSource = self

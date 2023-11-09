@@ -34,7 +34,7 @@ class CartasMgicasViewController: UIViewController {
         let cardsWS = Cards_WS()
         cardsWS.getCardResponse { respuesta, error in
             if error == nil {
-                self.arrCartasMagicas = respuesta?.dataCard ?? []
+                self.arrCartasMagicas = self.getAndSplitCard(with: respuesta?.dataCard ?? [], andType: "Spell Card")
                 DispatchQueue.main.async {
                     self.cardListTable.reloadData()
                 }

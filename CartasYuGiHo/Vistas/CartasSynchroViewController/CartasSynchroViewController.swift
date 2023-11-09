@@ -34,7 +34,7 @@ class CartasSynchroViewController: UIViewController {
         let cardsWS = Cards_WS()
         cardsWS.getCardResponse { respuesta, error in
             if error == nil {
-                self.arrCartasSynchro = respuesta?.dataCard ?? []
+                self.arrCartasSynchro = self.getAndSplitCard(with: respuesta?.dataCard ?? [], andType: "Synchro Monster")
                 DispatchQueue.main.async {
                     self.cardListTable.reloadData()
                 }

@@ -25,7 +25,7 @@ class CartasFusionViewController: UIViewController {
         setUpCartasFusion()
         getCardsList()
     }
-
+    
     //MARK: - FUNCTIONS
     
 
@@ -33,7 +33,7 @@ class CartasFusionViewController: UIViewController {
         let cardsWS = Cards_WS()
         cardsWS.getCardResponse { respuesta, error in
             if error == nil {
-                self.arrCartasFusion = respuesta?.dataCard ?? []
+                self.arrCartasFusion = self.getAndSplitCard(with: respuesta?.dataCard ?? [], andType: "Fusion Monster")
                 DispatchQueue.main.async {
                     self.cardListTable.reloadData()
                 }

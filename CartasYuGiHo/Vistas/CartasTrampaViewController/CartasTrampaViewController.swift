@@ -35,7 +35,7 @@ class CartasTrampaViewController: UIViewController {
         let cardsWS = Cards_WS()
         cardsWS.getCardResponse { respuesta, error in
             if error == nil {
-                self.arrCartasTrampa = respuesta?.dataCard ?? []
+                self.arrCartasTrampa = self.getAndSplitCard(with: respuesta?.dataCard ?? [], andType: "Trap Card")
                 DispatchQueue.main.async {
                     self.cardListTable.reloadData()
                 }

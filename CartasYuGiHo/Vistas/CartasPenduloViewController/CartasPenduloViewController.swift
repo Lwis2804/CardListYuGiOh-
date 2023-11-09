@@ -34,7 +34,7 @@ class CartasPenduloViewController: UIViewController {
         let cardsWS = Cards_WS()
         cardsWS.getCardResponse { respuesta, error in
             if error == nil {
-                self.arrCartasPendulo = respuesta?.dataCard ?? []
+                self.arrCartasPendulo = self.getAndSplitCard(with: respuesta?.dataCard ?? [], andType: "Pendulum Effect Monster")
                 DispatchQueue.main.async {
                     self.cardListTable.reloadData()
                 }
