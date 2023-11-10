@@ -15,7 +15,10 @@ class CardsListViewController: UIViewController {
     @IBOutlet weak var cardListTable: UITableView!
     
     //MARK: - VARIABLES
-    
+    let search = UISearchController(searchResultsController: nil)
+    var isSearchEmpty : Bool {return search.searchBar.text?.isEmpty ?? true}
+    var isFiltering : Bool {return search.isActive && !isSearchEmpty}
+    var recibeSearch : String = ""
     var arrCards: [DataCard] = []
     
     
@@ -24,6 +27,8 @@ class CardsListViewController: UIViewController {
         super.viewDidLoad()
         setUpCardTablelist()
         getCardsList()
+        setUpSearchBar()
+        setUpSearchBarProperties()
     }
 
     //MARK: - FUNCTIONS
@@ -45,7 +50,8 @@ class CardsListViewController: UIViewController {
         }
     }
     
-    
+
+
     
     
      
@@ -55,6 +61,20 @@ class CardsListViewController: UIViewController {
         self.cardListTable.register(CardListTableViewCell.nib, forCellReuseIdentifier: CardListTableViewCell.identifier)
     }
     
+  
+    private func setUpSearchBar() {
+        self.search.searchBar.searchTextField.delegate = self
+        search.obscuresBackgroundDuringPresentation = false
+        search.searchBar.searchTextField.placeholder = "Search your Card"
+        self.navigationItem.searchController = search
+        definesPresentationContext = true
+    }
+    
+    private func setUpSearchBarProperties() {
+        search.automaticallyShowsCancelButton = true
+        search.automaticallyShowsScopeBar = true
+        search.automaticallyShowsSearchResultsController = true
+    }
     
     //MARK: - NAVIGATION
 

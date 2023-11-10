@@ -17,6 +17,10 @@ class CartasXYZViewController: UIViewController {
     
     //MARK: - VARIABLES
     
+    let search = UISearchController(searchResultsController: nil)
+    var isSearchEmpty : Bool {return search.searchBar.text?.isEmpty ?? true}
+    var isFiltering : Bool {return search.isActive && !isSearchEmpty}
+    var recibeSearch : String = ""
     var arrCartasXYZ: [DataCard] = []
     
     
@@ -25,6 +29,8 @@ class CartasXYZViewController: UIViewController {
         super.viewDidLoad()
         setUpCartasXYZ()
         getCardsList()
+        setUpSearchBar()
+        setUpSearchBarProperties()
     }
 
     //MARK: - FUNCTIONS
@@ -52,6 +58,20 @@ class CartasXYZViewController: UIViewController {
         self.cardListTable.register(CartasXYZTableViewCell.nib, forCellReuseIdentifier: CartasXYZTableViewCell.identifier)
     }
     
+    
+    private func setUpSearchBar() {
+        self.search.searchBar.searchTextField.delegate = self
+        search.obscuresBackgroundDuringPresentation = false
+        search.searchBar.searchTextField.placeholder = "Search your Card"
+        self.navigationItem.searchController = search
+        definesPresentationContext = true
+    }
+    
+    private func setUpSearchBarProperties() {
+        search.automaticallyShowsCancelButton = true
+        search.automaticallyShowsScopeBar = true
+        search.automaticallyShowsSearchResultsController = true
+    }
     
     //MARK: - NAVIGATION
 

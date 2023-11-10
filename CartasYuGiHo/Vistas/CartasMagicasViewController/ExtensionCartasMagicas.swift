@@ -23,3 +23,25 @@ extension CartasMgicasViewController : UITableViewDelegate & UITableViewDataSour
     
  
 }
+
+//MARK: - UISEARCH RESULT
+
+extension CartasMgicasViewController : UISearchResultsUpdating{
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        
+    }
+    
+}
+
+
+extension CartasMgicasViewController : UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return true
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        return true
+    }
+}

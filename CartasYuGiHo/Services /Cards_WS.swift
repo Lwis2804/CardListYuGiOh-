@@ -12,6 +12,7 @@ final class Cards_WS {
     //MARK: - BLOQUES
 
     public typealias blkCardsResponse = (CardResponse?, Error?) -> Void
+ 
     
     
     func getCardResponse(withHandler: @escaping blkCardsResponse) {
@@ -30,6 +31,8 @@ final class Cards_WS {
         }.resume()
     }
     
+    
+  
     
     
 }

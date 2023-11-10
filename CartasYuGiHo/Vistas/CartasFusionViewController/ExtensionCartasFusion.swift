@@ -15,10 +15,32 @@ extension CartasFusionViewController : UITableViewDelegate & UITableViewDataSour
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let goToView = DetailCardViewController()
-     //   goToView.recibeDatos = arr[indexPath.row]
+        goToView.recibeCodable = arrCartasFusion[indexPath.row]
         navigationController?.pushViewController(goToView, animated: true)
     }
     
     
  
+}
+
+//MARK: - UISEARCH RESULT
+
+extension CartasFusionViewController : UISearchResultsUpdating{
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        
+    }
+    
+}
+
+
+extension CartasFusionViewController : UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return true
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        return true
+    }
 }

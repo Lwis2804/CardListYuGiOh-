@@ -24,11 +24,27 @@ extension CardsListViewController : UITableViewDelegate & UITableViewDataSource 
  
 }
 
-//MARK: - UICOLLECTIONVIEW DATASOURCE
-
-
-//MARK: - UICOLLECTIONVIEW FLOWLAYOUT
 
 
 
-//MARK: - UITABLEVIEW DELEGATE
+//MARK: - UISEARCH RESULT
+
+extension CardsListViewController : UISearchResultsUpdating{
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        
+    }
+    
+}
+
+
+extension CardsListViewController : UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return true
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        return true
+    }
+}

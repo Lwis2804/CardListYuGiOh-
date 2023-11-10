@@ -17,6 +17,10 @@ class CartasMgicasViewController: UIViewController {
     
     //MARK: - VARIABLES
     
+    let search = UISearchController(searchResultsController: nil)
+    var isSearchEmpty : Bool {return search.searchBar.text?.isEmpty ?? true}
+    var isFiltering : Bool {return search.isActive && !isSearchEmpty}
+    var recibeSearch : String = ""
     var arrCartasMagicas: [DataCard] = []
     
     
@@ -25,6 +29,8 @@ class CartasMgicasViewController: UIViewController {
         super.viewDidLoad()
         setUpCartasMagicas()
         getCardsList()
+        setUpSearchBar()
+        setUpSearchBarProperties()
     }
 
     //MARK: - FUNCTIONS
@@ -52,6 +58,19 @@ class CartasMgicasViewController: UIViewController {
         self.cardListTable.register(CartasMagicasTableViewCell.nib, forCellReuseIdentifier: CartasMagicasTableViewCell.identifier)
     }
     
+    private func setUpSearchBar() {
+        self.search.searchBar.searchTextField.delegate = self
+        search.obscuresBackgroundDuringPresentation = false
+        search.searchBar.searchTextField.placeholder = "Search your Card"
+        self.navigationItem.searchController = search
+        definesPresentationContext = true
+    }
+    
+    private func setUpSearchBarProperties() {
+        search.automaticallyShowsCancelButton = true
+        search.automaticallyShowsScopeBar = true
+        search.automaticallyShowsSearchResultsController = true
+    }
     
     //MARK: - NAVIGATION
 
