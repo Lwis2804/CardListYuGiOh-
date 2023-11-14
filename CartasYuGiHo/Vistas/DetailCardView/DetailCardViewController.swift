@@ -80,6 +80,8 @@ class DetailCardViewController: UIViewController {
         }
     
     func setUpCartasMagicasInf(categoria : DataCard){
+        self.view.layer.backgroundColor = UIColor(patternImage: UIImage(named: "spell") ?? UIImage()).cgColor
+        self.title = categoria.name
         self.nameCard.text = categoria.name
         self.typeCard.text = categoria.type
         self.archetypeCard.text = categoria.archetype
