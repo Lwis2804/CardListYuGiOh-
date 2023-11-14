@@ -26,25 +26,32 @@ class CardsListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpCardTablelist()
-        getCardsList()
         setUpSearchBar()
         setUpSearchBarProperties()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.getCardsList()
     }
 
     //MARK: - FUNCTIONS
     
-
+    
     private func getCardsList() {
+        self.view.activityStartAnimating(activityColor: .white, backgroundColor: UIColor.black.withAlphaComponent(0.5))
         let cardsWS = Cards_WS()
         cardsWS.getCardResponse { respuesta, error in
             if error == nil {
                 self.arrCards = self.getAndSplitCard(with: respuesta?.dataCard ?? [], andType: "Normal Monster")
                 DispatchQueue.main.async {
                     self.cardListTable.reloadData()
+                    self.view.activityStopAnimating()
                 }
             }else {
                 DispatchQueue.main.async {
                     self.showAlert(WithTitle: "Error", andMessage: "Ocurrio un error en el llamdo a Servicio")
+                    self.view.activityStopAnimating()
                 }
             }
         }

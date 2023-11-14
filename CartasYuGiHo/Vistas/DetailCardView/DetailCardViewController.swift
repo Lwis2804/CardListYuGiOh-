@@ -7,6 +7,9 @@
 
 import UIKit
 
+
+
+
 class DetailCardViewController: UIViewController {
     
     //MARK: - OUTLETS
@@ -42,6 +45,7 @@ class DetailCardViewController: UIViewController {
         switch recibeCodable {
         case is DataCard:
              setUpCartasMounstroinf(categoria: recibeCodable as! DataCard)
+            
         case is DataCard:
              setUpCartasMagicasInf(categoria: recibeCodable as! DataCard)
         case is DataCard:
@@ -62,6 +66,7 @@ class DetailCardViewController: UIViewController {
     //MARK: - FUNCTIONS
     
    func setUpCartasMounstroinf(categoria : DataCard){
+       
        self.nameCard.text = categoria.name
        self.typeCard.text = categoria.type
        self.archetypeCard.text = categoria.archetype
