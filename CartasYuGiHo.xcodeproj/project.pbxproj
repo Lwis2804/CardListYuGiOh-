@@ -27,6 +27,11 @@
 		AA5C7E282AF0796700EE4965 /* CardListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA5C7E262AF0796700EE4965 /* CardListTableViewCell.xib */; };
 		AA5C7E2A2AF07B1300EE4965 /* Extensiones.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5C7E292AF07B1300EE4965 /* Extensiones.swift */; };
 		AA5C7E2C2AF083DA00EE4965 /* Cards_WS.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5C7E2B2AF083DA00EE4965 /* Cards_WS.swift */; };
+		AA7B594A2B057C680089C139 /* CartasMounstroEfectoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7B59482B057C680089C139 /* CartasMounstroEfectoViewController.swift */; };
+		AA7B594B2B057C680089C139 /* CartasMounstroEfectoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA7B59492B057C680089C139 /* CartasMounstroEfectoViewController.xib */; };
+		AA7B594D2B057C7A0089C139 /* ExtensionMounstroEfecto.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7B594C2B057C7A0089C139 /* ExtensionMounstroEfecto.swift */; };
+		AA7B59512B057E490089C139 /* CartasMounstroEfectoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7B594F2B057E490089C139 /* CartasMounstroEfectoTableViewCell.swift */; };
+		AA7B59522B057E490089C139 /* CartasMounstroEfectoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA7B59502B057E490089C139 /* CartasMounstroEfectoTableViewCell.xib */; };
 		AA8250782AF9820300AE1A22 /* CartasMgicasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8250762AF9820300AE1A22 /* CartasMgicasViewController.swift */; };
 		AA8250792AF9820300AE1A22 /* CartasMgicasViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA8250772AF9820300AE1A22 /* CartasMgicasViewController.xib */; };
 		AA82507C2AF985E600AE1A22 /* CartasTrampaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA82507A2AF985E600AE1A22 /* CartasTrampaViewController.swift */; };
@@ -83,6 +88,11 @@
 		AA5C7E262AF0796700EE4965 /* CardListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardListTableViewCell.xib; sourceTree = "<group>"; };
 		AA5C7E292AF07B1300EE4965 /* Extensiones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensiones.swift; sourceTree = "<group>"; };
 		AA5C7E2B2AF083DA00EE4965 /* Cards_WS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cards_WS.swift; sourceTree = "<group>"; };
+		AA7B59482B057C680089C139 /* CartasMounstroEfectoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartasMounstroEfectoViewController.swift; sourceTree = "<group>"; };
+		AA7B59492B057C680089C139 /* CartasMounstroEfectoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartasMounstroEfectoViewController.xib; sourceTree = "<group>"; };
+		AA7B594C2B057C7A0089C139 /* ExtensionMounstroEfecto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionMounstroEfecto.swift; sourceTree = "<group>"; };
+		AA7B594F2B057E490089C139 /* CartasMounstroEfectoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartasMounstroEfectoTableViewCell.swift; sourceTree = "<group>"; };
+		AA7B59502B057E490089C139 /* CartasMounstroEfectoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartasMounstroEfectoTableViewCell.xib; sourceTree = "<group>"; };
 		AA8250762AF9820300AE1A22 /* CartasMgicasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartasMgicasViewController.swift; sourceTree = "<group>"; };
 		AA8250772AF9820300AE1A22 /* CartasMgicasViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartasMgicasViewController.xib; sourceTree = "<group>"; };
 		AA82507A2AF985E600AE1A22 /* CartasTrampaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartasTrampaViewController.swift; sourceTree = "<group>"; };
@@ -196,6 +206,7 @@
 				AA8250722AF9812500AE1A22 /* CartasFusionViewController */,
 				AA8250712AF980A100AE1A22 /* CartasTrampaViewController */,
 				AA8250702AF9808100AE1A22 /* CartasMagicasViewController */,
+				AA7B59472B057C170089C139 /* CartasMounstroEfectoViewController */,
 				AA5C7E152AF058BB00EE4965 /* CardsListViewController */,
 				AA5C7E1C2AF0593100EE4965 /* DetailCardView */,
 			);
@@ -250,9 +261,29 @@
 				AA8250932AF9884A00AE1A22 /* CartasFusion */,
 				AA8250922AF9883C00AE1A22 /* CartasTrampa */,
 				AA8250912AF9881900AE1A22 /* CartasMagicas */,
+				AA7B594E2B057E110089C139 /* CartasMounstroEfecto */,
 				AA8250902AF9880200AE1A22 /* CartasMounstro */,
 			);
 			path = TableCells;
+			sourceTree = "<group>";
+		};
+		AA7B59472B057C170089C139 /* CartasMounstroEfectoViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AA7B59482B057C680089C139 /* CartasMounstroEfectoViewController.swift */,
+				AA7B594C2B057C7A0089C139 /* ExtensionMounstroEfecto.swift */,
+				AA7B59492B057C680089C139 /* CartasMounstroEfectoViewController.xib */,
+			);
+			path = CartasMounstroEfectoViewController;
+			sourceTree = "<group>";
+		};
+		AA7B594E2B057E110089C139 /* CartasMounstroEfecto */ = {
+			isa = PBXGroup;
+			children = (
+				AA7B594F2B057E490089C139 /* CartasMounstroEfectoTableViewCell.swift */,
+				AA7B59502B057E490089C139 /* CartasMounstroEfectoTableViewCell.xib */,
+			);
+			path = CartasMounstroEfecto;
 			sourceTree = "<group>";
 		};
 		AA8250702AF9808100AE1A22 /* CartasMagicasViewController */ = {
@@ -437,6 +468,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA8250862AF9862500AE1A22 /* CartasXYZViewController.xib in Resources */,
+				AA7B594B2B057C680089C139 /* CartasMounstroEfectoViewController.xib in Resources */,
 				AA5C7E192AF058F200EE4965 /* CardsListViewController.xib in Resources */,
 				AA82509A2AF9889F00AE1A22 /* CartasMagicasTableViewCell.xib in Resources */,
 				AA82507D2AF985E600AE1A22 /* CartasTrampaViewController.xib in Resources */,
@@ -451,6 +483,7 @@
 				AA8250822AF9860D00AE1A22 /* CartasFusionViewController.xib in Resources */,
 				AA82508A2AF9863C00AE1A22 /* CartasPenduloViewController.xib in Resources */,
 				AA8250792AF9820300AE1A22 /* CartasMgicasViewController.xib in Resources */,
+				AA7B59522B057E490089C139 /* CartasMounstroEfectoTableViewCell.xib in Resources */,
 				AA5C7E202AF0595D00EE4965 /* DetailCardViewController.xib in Resources */,
 				AA5C7DFC2AF0553A00EE4965 /* Assets.xcassets in Resources */,
 				AA5C7DFA2AF0553600EE4965 /* Main.storyboard in Resources */,
@@ -489,11 +522,14 @@
 				AA82507C2AF985E600AE1A22 /* CartasTrampaViewController.swift in Sources */,
 				AA5C7E2C2AF083DA00EE4965 /* Cards_WS.swift in Sources */,
 				AA5C7E112AF0574000EE4965 /* Card_sets.swift in Sources */,
+				AA7B594A2B057C680089C139 /* CartasMounstroEfectoViewController.swift in Sources */,
 				AA8250B62AF9956400AE1A22 /* ExtensionCartasTrampa.swift in Sources */,
 				AA8250B12AF9891B00AE1A22 /* CartasPenduloTableViewCell.swift in Sources */,
+				AA7B594D2B057C7A0089C139 /* ExtensionMounstroEfecto.swift in Sources */,
 				AA8250892AF9863C00AE1A22 /* CartasPenduloViewController.swift in Sources */,
 				AA8250BA2AF9983300AE1A22 /* ExtensinCartasXYZ.swift in Sources */,
 				AAF087B62AF0AB8A001EA0FC /* DataCard.swift in Sources */,
+				AA7B59512B057E490089C139 /* CartasMounstroEfectoTableViewCell.swift in Sources */,
 				AA5C7E142AF0575C00EE4965 /* CardResponse.swift in Sources */,
 				AA5C7E122AF0574000EE4965 /* Card_images.swift in Sources */,
 				AA8250A12AF988C500AE1A22 /* CartasFusionTableViewCell.swift in Sources */,

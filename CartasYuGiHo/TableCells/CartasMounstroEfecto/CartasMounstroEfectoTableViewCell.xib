@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="CartasMounstroEfectoTableViewCell" customModule="CartasYuGiHo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="308" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="308" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pzr-Ck-c8o">
+                        <rect key="frame" x="3" y="2" width="303" height="96"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JXc-vL-e14">
+                                <rect key="frame" x="6" y="2" width="60" height="92"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="CvZ-0G-7fO"/>
+                                    <constraint firstAttribute="height" constant="92" id="IL3-Mi-s6a"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ZN-uO-zZy">
+                                <rect key="frame" x="76" y="2" width="223" height="92"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                <color key="textColor" red="0.88608771559999999" green="0.4996563792" blue="0.0106566539" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99999994039999995" green="0.99999994039999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="JXc-vL-e14" secondAttribute="bottom" constant="2" id="0aX-da-ZlN"/>
+                            <constraint firstAttribute="trailing" secondItem="4ZN-uO-zZy" secondAttribute="trailing" constant="4" id="1De-tu-Rui"/>
+                            <constraint firstItem="JXc-vL-e14" firstAttribute="top" secondItem="pzr-Ck-c8o" secondAttribute="top" constant="2" id="88N-Jx-emL"/>
+                            <constraint firstItem="4ZN-uO-zZy" firstAttribute="top" secondItem="pzr-Ck-c8o" secondAttribute="top" constant="2" id="9iw-Fr-OSf"/>
+                            <constraint firstAttribute="bottom" secondItem="4ZN-uO-zZy" secondAttribute="bottom" constant="2" id="MSW-x5-Fef"/>
+                            <constraint firstItem="4ZN-uO-zZy" firstAttribute="leading" secondItem="JXc-vL-e14" secondAttribute="trailing" constant="10" id="j5s-f4-FhD"/>
+                            <constraint firstItem="JXc-vL-e14" firstAttribute="leading" secondItem="pzr-Ck-c8o" secondAttribute="leading" constant="6" id="v4z-bR-a9o"/>
+                            <constraint firstAttribute="height" constant="96" id="wYA-dU-vXz"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="pzr-Ck-c8o" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="3" id="4pn-jr-uvF"/>
+                    <constraint firstAttribute="trailing" secondItem="pzr-Ck-c8o" secondAttribute="trailing" constant="2" id="9gQ-el-rEX"/>
+                    <constraint firstItem="pzr-Ck-c8o" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="dOW-vs-nlu"/>
+                    <constraint firstAttribute="bottom" secondItem="pzr-Ck-c8o" secondAttribute="bottom" constant="2" id="iV7-6f-ssG"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" red="0.69054842000000005" green="0.51209145779999998" blue="0.25319206709999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="backgroundImage" destination="H2p-sc-9uM" id="veW-e5-KZq"/>
+                <outlet property="cardImage" destination="JXc-vL-e14" id="l0Q-PU-xRz"/>
+                <outlet property="cardName" destination="4ZN-uO-zZy" id="3TO-hm-6kx"/>
+            </connections>
+            <point key="canvasLocation" x="101" y="-12"/>
+        </tableViewCell>
+    </objects>
+</document>
