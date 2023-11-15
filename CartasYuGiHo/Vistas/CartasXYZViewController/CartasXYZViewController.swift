@@ -28,21 +28,26 @@ class CartasXYZViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpCartasXYZ()
-        getCardsList()
         setUpSearchBar()
         setUpSearchBarProperties()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        getCardsList()
     }
 
     //MARK: - FUNCTIONS
     
 
     private func getCardsList() {
+        self.view.activityStartAnimating(activityColor: .white, backgroundColor: UIColor.black.withAlphaComponent(0.5))
         let cardsWS = Cards_WS()
         cardsWS.getCardResponse { respuesta, error in
             if error == nil {
                 self.arrCartasXYZ = self.getAndSplitCard(with: respuesta?.dataCard ?? [], andType: "XYZ Monster")
                 DispatchQueue.main.async {
                     self.cardListTable.reloadData()
+                    self.view.activityStopAnimating()
                 }
             }else {
                 DispatchQueue.main.async {
