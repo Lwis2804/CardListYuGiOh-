@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="CartasLinkTableViewCell" customModule="CartasYuGiHo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="308" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="308" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2GS-Yh-MZv">
+                        <rect key="frame" x="4" y="2" width="300" height="96"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="link" translatesAutoresizingMaskIntoConstraints="NO" id="4wd-iu-bNO">
+                                <rect key="frame" x="6" y="2" width="60" height="92"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="92" id="jWr-9k-Vhl"/>
+                                    <constraint firstAttribute="width" constant="60" id="zrS-3e-BvW"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbB-fX-uzQ">
+                                <rect key="frame" x="76" y="2" width="222" height="92"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                <color key="textColor" red="0.88608771559999999" green="0.4996563792" blue="0.0106566539" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99999994039999995" green="0.99999994039999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="4wd-iu-bNO" secondAttribute="bottom" constant="2" id="1N2-7M-6ef"/>
+                            <constraint firstItem="jbB-fX-uzQ" firstAttribute="top" secondItem="2GS-Yh-MZv" secondAttribute="top" constant="2" id="AYF-fZ-M1s"/>
+                            <constraint firstItem="jbB-fX-uzQ" firstAttribute="leading" secondItem="4wd-iu-bNO" secondAttribute="trailing" constant="10" id="AsU-sw-2i0"/>
+                            <constraint firstAttribute="trailing" secondItem="jbB-fX-uzQ" secondAttribute="trailing" constant="2" id="d9Q-Ex-6dp"/>
+                            <constraint firstItem="4wd-iu-bNO" firstAttribute="leading" secondItem="2GS-Yh-MZv" secondAttribute="leading" constant="6" id="eNO-rw-bDQ"/>
+                            <constraint firstAttribute="height" constant="96" id="kc6-l2-vh7"/>
+                            <constraint firstItem="4wd-iu-bNO" firstAttribute="top" secondItem="2GS-Yh-MZv" secondAttribute="top" constant="2" id="toV-yB-2vZ"/>
+                            <constraint firstAttribute="bottom" secondItem="jbB-fX-uzQ" secondAttribute="bottom" constant="2" id="z4T-9T-CJ7"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="2GS-Yh-MZv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="JHT-Cg-dCq"/>
+                    <constraint firstAttribute="bottom" secondItem="2GS-Yh-MZv" secondAttribute="bottom" constant="2" id="kTl-sR-Cxn"/>
+                    <constraint firstItem="2GS-Yh-MZv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="kVS-uX-35m"/>
+                    <constraint firstAttribute="trailing" secondItem="2GS-Yh-MZv" secondAttribute="trailing" constant="4" id="t6V-Cd-gqE"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" red="0.03505099565" green="0.27672275899999998" blue="0.50933241839999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="backgroundImage" destination="H2p-sc-9uM" id="hmY-Oz-dC4"/>
+                <outlet property="cardImage" destination="4wd-iu-bNO" id="PSD-99-qIn"/>
+                <outlet property="cardName" destination="jbB-fX-uzQ" id="AtO-x9-wUd"/>
+            </connections>
+            <point key="canvasLocation" x="100.76335877862596" y="-12.67605633802817"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="link" width="648" height="966"/>
+    </resources>
+</document>

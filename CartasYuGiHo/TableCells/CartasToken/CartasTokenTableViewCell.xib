@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="CartasTokenTableViewCell" customModule="CartasYuGiHo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="308" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="308" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4C6-66-9kJ">
+                        <rect key="frame" x="4" y="2" width="300" height="96"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="token" translatesAutoresizingMaskIntoConstraints="NO" id="iL7-Jd-N5J">
+                                <rect key="frame" x="6" y="2" width="60" height="92"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="92" id="dme-RG-WcT"/>
+                                    <constraint firstAttribute="width" constant="60" id="m5C-lI-5oX"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iZe-Vl-FVL">
+                                <rect key="frame" x="76" y="2" width="222" height="92"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                <color key="textColor" red="0.88608771559999999" green="0.4996563792" blue="0.0106566539" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99999994039999995" green="0.99999994039999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="iZe-Vl-FVL" firstAttribute="leading" secondItem="iL7-Jd-N5J" secondAttribute="trailing" constant="10" id="5BG-rC-X3U"/>
+                            <constraint firstItem="iL7-Jd-N5J" firstAttribute="leading" secondItem="4C6-66-9kJ" secondAttribute="leading" constant="6" id="8GB-qg-3UL"/>
+                            <constraint firstItem="iL7-Jd-N5J" firstAttribute="top" secondItem="4C6-66-9kJ" secondAttribute="top" constant="2" id="Q3k-9R-Ojn"/>
+                            <constraint firstAttribute="height" constant="96" id="QFh-dZ-gtc"/>
+                            <constraint firstAttribute="trailing" secondItem="iZe-Vl-FVL" secondAttribute="trailing" constant="2" id="oBm-kT-EnG"/>
+                            <constraint firstAttribute="bottom" secondItem="iZe-Vl-FVL" secondAttribute="bottom" constant="2" id="owK-BI-VOW"/>
+                            <constraint firstItem="iZe-Vl-FVL" firstAttribute="top" secondItem="4C6-66-9kJ" secondAttribute="top" constant="2" id="vXX-3d-Pr6"/>
+                            <constraint firstAttribute="bottom" secondItem="iL7-Jd-N5J" secondAttribute="bottom" constant="2" id="wSw-1B-vve"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="4C6-66-9kJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="Ajc-PZ-Xgg"/>
+                    <constraint firstAttribute="bottom" secondItem="4C6-66-9kJ" secondAttribute="bottom" constant="2" id="CRc-pi-8nR"/>
+                    <constraint firstAttribute="trailing" secondItem="4C6-66-9kJ" secondAttribute="trailing" constant="4" id="aSA-Gs-C3m"/>
+                    <constraint firstItem="4C6-66-9kJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="o9D-PJ-Q8r"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" red="0.44383686779999998" green="0.41556978230000002" blue="0.41534948350000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="backgroundImage" destination="H2p-sc-9uM" id="pbQ-ER-jyY"/>
+                <outlet property="cardImage" destination="iL7-Jd-N5J" id="9Wq-je-oty"/>
+                <outlet property="cardName" destination="iZe-Vl-FVL" id="sMH-dc-hNc"/>
+            </connections>
+            <point key="canvasLocation" x="101" y="-12"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="token" width="648" height="966"/>
+    </resources>
+</document>

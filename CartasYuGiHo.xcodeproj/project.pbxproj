@@ -32,6 +32,17 @@
 		AA7B594D2B057C7A0089C139 /* ExtensionMounstroEfecto.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7B594C2B057C7A0089C139 /* ExtensionMounstroEfecto.swift */; };
 		AA7B59512B057E490089C139 /* CartasMounstroEfectoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7B594F2B057E490089C139 /* CartasMounstroEfectoTableViewCell.swift */; };
 		AA7B59522B057E490089C139 /* CartasMounstroEfectoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA7B59502B057E490089C139 /* CartasMounstroEfectoTableViewCell.xib */; };
+		AA7BA3FE2B06BA9400DE4A5C /* CartasRitualViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7BA3FC2B06BA9400DE4A5C /* CartasRitualViewController.swift */; };
+		AA7BA3FF2B06BA9400DE4A5C /* CartasRitualViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA7BA3FD2B06BA9400DE4A5C /* CartasRitualViewController.xib */; };
+		AA7BA4012B06BAB200DE4A5C /* ExtensionCartasRitual.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7BA4002B06BAB200DE4A5C /* ExtensionCartasRitual.swift */; };
+		AA7BA4042B06BAD300DE4A5C /* CartasLinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7BA4022B06BAD300DE4A5C /* CartasLinkViewController.swift */; };
+		AA7BA4052B06BAD300DE4A5C /* CartasLinkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA7BA4032B06BAD300DE4A5C /* CartasLinkViewController.xib */; };
+		AA7BA4072B06BAE700DE4A5C /* ExtensionCartasLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7BA4062B06BAE700DE4A5C /* ExtensionCartasLink.swift */; };
+		AA7BA40A2B06BAFF00DE4A5C /* CartasTokenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7BA4082B06BAFF00DE4A5C /* CartasTokenViewController.swift */; };
+		AA7BA40B2B06BAFF00DE4A5C /* CartasTokenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA7BA4092B06BAFF00DE4A5C /* CartasTokenViewController.xib */; };
+		AA7BA40D2B06BB1200DE4A5C /* ExtensionCartasToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7BA40C2B06BB1200DE4A5C /* ExtensionCartasToken.swift */; };
+		AA7BA4112B06BB6000DE4A5C /* CartasRitualTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7BA40F2B06BB6000DE4A5C /* CartasRitualTableViewCell.swift */; };
+		AA7BA4122B06BB6000DE4A5C /* CartasRitualTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA7BA4102B06BB6000DE4A5C /* CartasRitualTableViewCell.xib */; };
 		AA8250782AF9820300AE1A22 /* CartasMgicasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8250762AF9820300AE1A22 /* CartasMgicasViewController.swift */; };
 		AA8250792AF9820300AE1A22 /* CartasMgicasViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA8250772AF9820300AE1A22 /* CartasMgicasViewController.xib */; };
 		AA82507C2AF985E600AE1A22 /* CartasTrampaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA82507A2AF985E600AE1A22 /* CartasTrampaViewController.swift */; };
@@ -62,6 +73,10 @@
 		AA8250BA2AF9983300AE1A22 /* ExtensinCartasXYZ.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8250B92AF9983300AE1A22 /* ExtensinCartasXYZ.swift */; };
 		AA8250BC2AF9995200AE1A22 /* ExtensionCartasPendulo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8250BB2AF9995200AE1A22 /* ExtensionCartasPendulo.swift */; };
 		AA8250BE2AF99A2600AE1A22 /* ExtensionCartasSynchro.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8250BD2AF99A2600AE1A22 /* ExtensionCartasSynchro.swift */; };
+		AA8B562C2B06BE2800B522A5 /* CartasLinkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8B562A2B06BE2800B522A5 /* CartasLinkTableViewCell.swift */; };
+		AA8B562D2B06BE2800B522A5 /* CartasLinkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA8B562B2B06BE2800B522A5 /* CartasLinkTableViewCell.xib */; };
+		AA8B56312B06BEE500B522A5 /* CartasTokenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8B562F2B06BEE500B522A5 /* CartasTokenTableViewCell.swift */; };
+		AA8B56322B06BEE500B522A5 /* CartasTokenTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA8B56302B06BEE500B522A5 /* CartasTokenTableViewCell.xib */; };
 		AAF087B62AF0AB8A001EA0FC /* DataCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF087B52AF0AB8A001EA0FC /* DataCard.swift */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +108,17 @@
 		AA7B594C2B057C7A0089C139 /* ExtensionMounstroEfecto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionMounstroEfecto.swift; sourceTree = "<group>"; };
 		AA7B594F2B057E490089C139 /* CartasMounstroEfectoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartasMounstroEfectoTableViewCell.swift; sourceTree = "<group>"; };
 		AA7B59502B057E490089C139 /* CartasMounstroEfectoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartasMounstroEfectoTableViewCell.xib; sourceTree = "<group>"; };
+		AA7BA3FC2B06BA9400DE4A5C /* CartasRitualViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartasRitualViewController.swift; sourceTree = "<group>"; };
+		AA7BA3FD2B06BA9400DE4A5C /* CartasRitualViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartasRitualViewController.xib; sourceTree = "<group>"; };
+		AA7BA4002B06BAB200DE4A5C /* ExtensionCartasRitual.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionCartasRitual.swift; sourceTree = "<group>"; };
+		AA7BA4022B06BAD300DE4A5C /* CartasLinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartasLinkViewController.swift; sourceTree = "<group>"; };
+		AA7BA4032B06BAD300DE4A5C /* CartasLinkViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartasLinkViewController.xib; sourceTree = "<group>"; };
+		AA7BA4062B06BAE700DE4A5C /* ExtensionCartasLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionCartasLink.swift; sourceTree = "<group>"; };
+		AA7BA4082B06BAFF00DE4A5C /* CartasTokenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartasTokenViewController.swift; sourceTree = "<group>"; };
+		AA7BA4092B06BAFF00DE4A5C /* CartasTokenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartasTokenViewController.xib; sourceTree = "<group>"; };
+		AA7BA40C2B06BB1200DE4A5C /* ExtensionCartasToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionCartasToken.swift; sourceTree = "<group>"; };
+		AA7BA40F2B06BB6000DE4A5C /* CartasRitualTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartasRitualTableViewCell.swift; sourceTree = "<group>"; };
+		AA7BA4102B06BB6000DE4A5C /* CartasRitualTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartasRitualTableViewCell.xib; sourceTree = "<group>"; };
 		AA8250762AF9820300AE1A22 /* CartasMgicasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartasMgicasViewController.swift; sourceTree = "<group>"; };
 		AA8250772AF9820300AE1A22 /* CartasMgicasViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartasMgicasViewController.xib; sourceTree = "<group>"; };
 		AA82507A2AF985E600AE1A22 /* CartasTrampaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartasTrampaViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +149,10 @@
 		AA8250B92AF9983300AE1A22 /* ExtensinCartasXYZ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensinCartasXYZ.swift; sourceTree = "<group>"; };
 		AA8250BB2AF9995200AE1A22 /* ExtensionCartasPendulo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionCartasPendulo.swift; sourceTree = "<group>"; };
 		AA8250BD2AF99A2600AE1A22 /* ExtensionCartasSynchro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionCartasSynchro.swift; sourceTree = "<group>"; };
+		AA8B562A2B06BE2800B522A5 /* CartasLinkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartasLinkTableViewCell.swift; sourceTree = "<group>"; };
+		AA8B562B2B06BE2800B522A5 /* CartasLinkTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartasLinkTableViewCell.xib; sourceTree = "<group>"; };
+		AA8B562F2B06BEE500B522A5 /* CartasTokenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartasTokenTableViewCell.swift; sourceTree = "<group>"; };
+		AA8B56302B06BEE500B522A5 /* CartasTokenTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartasTokenTableViewCell.xib; sourceTree = "<group>"; };
 		AAF087B52AF0AB8A001EA0FC /* DataCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -200,9 +230,12 @@
 		AA5C7E092AF056DE00EE4965 /* Vistas */ = {
 			isa = PBXGroup;
 			children = (
+				AA7BA3FB2B06BA3F00DE4A5C /* CartasTokenViewController */,
+				AA7BA3F92B06B9AD00DE4A5C /* CartasLinkViewController */,
 				AA8250752AF981B300AE1A22 /* CartasSynchroViewController */,
 				AA8250742AF9818200AE1A22 /* CartasPenduloViewController */,
 				AA8250732AF9814500AE1A22 /* CartasXYZViewController */,
+				AA7BA3FA2B06B9C600DE4A5C /* CartasRitualViewController */,
 				AA8250722AF9812500AE1A22 /* CartasFusionViewController */,
 				AA8250712AF980A100AE1A22 /* CartasTrampaViewController */,
 				AA8250702AF9808100AE1A22 /* CartasMagicasViewController */,
@@ -255,9 +288,12 @@
 		AA5C7E242AF0791900EE4965 /* TableCells */ = {
 			isa = PBXGroup;
 			children = (
+				AA8B562E2B06BEC400B522A5 /* CartasToken */,
+				AA8B56292B06BE0B00B522A5 /* CartasLink */,
 				AA8250962AF9886E00AE1A22 /* CartasPendulo */,
 				AA8250952AF9885F00AE1A22 /* CartasSynchro */,
 				AA8250942AF9885400AE1A22 /* CartasXYZ */,
+				AA7BA40E2B06BB2800DE4A5C /* CartasRitual */,
 				AA8250932AF9884A00AE1A22 /* CartasFusion */,
 				AA8250922AF9883C00AE1A22 /* CartasTrampa */,
 				AA8250912AF9881900AE1A22 /* CartasMagicas */,
@@ -284,6 +320,45 @@
 				AA7B59502B057E490089C139 /* CartasMounstroEfectoTableViewCell.xib */,
 			);
 			path = CartasMounstroEfecto;
+			sourceTree = "<group>";
+		};
+		AA7BA3F92B06B9AD00DE4A5C /* CartasLinkViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AA7BA4022B06BAD300DE4A5C /* CartasLinkViewController.swift */,
+				AA7BA4032B06BAD300DE4A5C /* CartasLinkViewController.xib */,
+				AA7BA4062B06BAE700DE4A5C /* ExtensionCartasLink.swift */,
+			);
+			path = CartasLinkViewController;
+			sourceTree = "<group>";
+		};
+		AA7BA3FA2B06B9C600DE4A5C /* CartasRitualViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AA7BA3FC2B06BA9400DE4A5C /* CartasRitualViewController.swift */,
+				AA7BA4002B06BAB200DE4A5C /* ExtensionCartasRitual.swift */,
+				AA7BA3FD2B06BA9400DE4A5C /* CartasRitualViewController.xib */,
+			);
+			path = CartasRitualViewController;
+			sourceTree = "<group>";
+		};
+		AA7BA3FB2B06BA3F00DE4A5C /* CartasTokenViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AA7BA4082B06BAFF00DE4A5C /* CartasTokenViewController.swift */,
+				AA7BA40C2B06BB1200DE4A5C /* ExtensionCartasToken.swift */,
+				AA7BA4092B06BAFF00DE4A5C /* CartasTokenViewController.xib */,
+			);
+			path = CartasTokenViewController;
+			sourceTree = "<group>";
+		};
+		AA7BA40E2B06BB2800DE4A5C /* CartasRitual */ = {
+			isa = PBXGroup;
+			children = (
+				AA7BA40F2B06BB6000DE4A5C /* CartasRitualTableViewCell.swift */,
+				AA7BA4102B06BB6000DE4A5C /* CartasRitualTableViewCell.xib */,
+			);
+			path = CartasRitual;
 			sourceTree = "<group>";
 		};
 		AA8250702AF9808100AE1A22 /* CartasMagicasViewController */ = {
@@ -409,6 +484,24 @@
 			path = CartasPendulo;
 			sourceTree = "<group>";
 		};
+		AA8B56292B06BE0B00B522A5 /* CartasLink */ = {
+			isa = PBXGroup;
+			children = (
+				AA8B562A2B06BE2800B522A5 /* CartasLinkTableViewCell.swift */,
+				AA8B562B2B06BE2800B522A5 /* CartasLinkTableViewCell.xib */,
+			);
+			path = CartasLink;
+			sourceTree = "<group>";
+		};
+		AA8B562E2B06BEC400B522A5 /* CartasToken */ = {
+			isa = PBXGroup;
+			children = (
+				AA8B562F2B06BEE500B522A5 /* CartasTokenTableViewCell.swift */,
+				AA8B56302B06BEE500B522A5 /* CartasTokenTableViewCell.xib */,
+			);
+			path = CartasToken;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -468,22 +561,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA8250862AF9862500AE1A22 /* CartasXYZViewController.xib in Resources */,
+				AA8B56322B06BEE500B522A5 /* CartasTokenTableViewCell.xib in Resources */,
 				AA7B594B2B057C680089C139 /* CartasMounstroEfectoViewController.xib in Resources */,
 				AA5C7E192AF058F200EE4965 /* CardsListViewController.xib in Resources */,
 				AA82509A2AF9889F00AE1A22 /* CartasMagicasTableViewCell.xib in Resources */,
 				AA82507D2AF985E600AE1A22 /* CartasTrampaViewController.xib in Resources */,
 				AA82509E2AF988B100AE1A22 /* CartasTrampaTableViewCell.xib in Resources */,
 				AA82508F2AF9867B00AE1A22 /* CartasSynchroViewController.xib in Resources */,
+				AA7BA40B2B06BAFF00DE4A5C /* CartasTokenViewController.xib in Resources */,
+				AA8B562D2B06BE2800B522A5 /* CartasLinkTableViewCell.xib in Resources */,
 				AA5C7E282AF0796700EE4965 /* CardListTableViewCell.xib in Resources */,
 				AA8250AA2AF988F500AE1A22 /* CartasXYZTableViewCell.xib in Resources */,
 				AA8250AE2AF9890900AE1A22 /* CartasSynchroTableViewCell.xib in Resources */,
 				AA8250B22AF9891B00AE1A22 /* CartasPenduloTableViewCell.xib in Resources */,
 				AA5C7DFF2AF0553A00EE4965 /* LaunchScreen.storyboard in Resources */,
+				AA7BA3FF2B06BA9400DE4A5C /* CartasRitualViewController.xib in Resources */,
 				AA8250A22AF988C500AE1A22 /* CartasFusionTableViewCell.xib in Resources */,
 				AA8250822AF9860D00AE1A22 /* CartasFusionViewController.xib in Resources */,
+				AA7BA4122B06BB6000DE4A5C /* CartasRitualTableViewCell.xib in Resources */,
 				AA82508A2AF9863C00AE1A22 /* CartasPenduloViewController.xib in Resources */,
 				AA8250792AF9820300AE1A22 /* CartasMgicasViewController.xib in Resources */,
 				AA7B59522B057E490089C139 /* CartasMounstroEfectoTableViewCell.xib in Resources */,
+				AA7BA4052B06BAD300DE4A5C /* CartasLinkViewController.xib in Resources */,
 				AA5C7E202AF0595D00EE4965 /* DetailCardViewController.xib in Resources */,
 				AA5C7DFC2AF0553A00EE4965 /* Assets.xcassets in Resources */,
 				AA5C7DFA2AF0553600EE4965 /* Main.storyboard in Resources */,
@@ -505,14 +604,19 @@
 				AA82508E2AF9867B00AE1A22 /* CartasSynchroViewController.swift in Sources */,
 				AA5C7DF32AF0553600EE4965 /* AppDelegate.swift in Sources */,
 				AA8250992AF9889F00AE1A22 /* CartasMagicasTableViewCell.swift in Sources */,
+				AA7BA40A2B06BAFF00DE4A5C /* CartasTokenViewController.swift in Sources */,
 				AA5C7E272AF0796700EE4965 /* CardListTableViewCell.swift in Sources */,
 				AA5C7E2A2AF07B1300EE4965 /* Extensiones.swift in Sources */,
+				AA8B562C2B06BE2800B522A5 /* CartasLinkTableViewCell.swift in Sources */,
 				AA8250BC2AF9995200AE1A22 /* ExtensionCartasPendulo.swift in Sources */,
 				AA8250B82AF9971E00AE1A22 /* ExtensionCartasFusion.swift in Sources */,
+				AA7BA4112B06BB6000DE4A5C /* CartasRitualTableViewCell.swift in Sources */,
 				AA5C7E232AF05B4600EE4965 /* TabBarViewController.swift in Sources */,
+				AA7BA4072B06BAE700DE4A5C /* ExtensionCartasLink.swift in Sources */,
 				AA5C7E182AF058F200EE4965 /* CardsListViewController.swift in Sources */,
 				AA8250B42AF9905900AE1A22 /* ExtensionCartasMagicas.swift in Sources */,
 				AA82509D2AF988B100AE1A22 /* CartasTrampaTableViewCell.swift in Sources */,
+				AA7BA4012B06BAB200DE4A5C /* ExtensionCartasRitual.swift in Sources */,
 				AA8250782AF9820300AE1A22 /* CartasMgicasViewController.swift in Sources */,
 				AA5C7DF52AF0553600EE4965 /* SceneDelegate.swift in Sources */,
 				AA8250AD2AF9890900AE1A22 /* CartasSynchroTableViewCell.swift in Sources */,
@@ -523,14 +627,18 @@
 				AA5C7E2C2AF083DA00EE4965 /* Cards_WS.swift in Sources */,
 				AA5C7E112AF0574000EE4965 /* Card_sets.swift in Sources */,
 				AA7B594A2B057C680089C139 /* CartasMounstroEfectoViewController.swift in Sources */,
+				AA7BA4042B06BAD300DE4A5C /* CartasLinkViewController.swift in Sources */,
 				AA8250B62AF9956400AE1A22 /* ExtensionCartasTrampa.swift in Sources */,
+				AA7BA40D2B06BB1200DE4A5C /* ExtensionCartasToken.swift in Sources */,
 				AA8250B12AF9891B00AE1A22 /* CartasPenduloTableViewCell.swift in Sources */,
+				AA8B56312B06BEE500B522A5 /* CartasTokenTableViewCell.swift in Sources */,
 				AA7B594D2B057C7A0089C139 /* ExtensionMounstroEfecto.swift in Sources */,
 				AA8250892AF9863C00AE1A22 /* CartasPenduloViewController.swift in Sources */,
 				AA8250BA2AF9983300AE1A22 /* ExtensinCartasXYZ.swift in Sources */,
 				AAF087B62AF0AB8A001EA0FC /* DataCard.swift in Sources */,
 				AA7B59512B057E490089C139 /* CartasMounstroEfectoTableViewCell.swift in Sources */,
 				AA5C7E142AF0575C00EE4965 /* CardResponse.swift in Sources */,
+				AA7BA3FE2B06BA9400DE4A5C /* CartasRitualViewController.swift in Sources */,
 				AA5C7E122AF0574000EE4965 /* Card_images.swift in Sources */,
 				AA8250A12AF988C500AE1A22 /* CartasFusionTableViewCell.swift in Sources */,
 			);
