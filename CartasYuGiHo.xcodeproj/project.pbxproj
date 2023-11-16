@@ -326,8 +326,8 @@
 			isa = PBXGroup;
 			children = (
 				AA7BA4022B06BAD300DE4A5C /* CartasLinkViewController.swift */,
-				AA7BA4032B06BAD300DE4A5C /* CartasLinkViewController.xib */,
 				AA7BA4062B06BAE700DE4A5C /* ExtensionCartasLink.swift */,
+				AA7BA4032B06BAD300DE4A5C /* CartasLinkViewController.xib */,
 			);
 			path = CartasLinkViewController;
 			sourceTree = "<group>";

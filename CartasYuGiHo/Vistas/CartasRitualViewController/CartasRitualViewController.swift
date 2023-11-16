@@ -9,21 +9,78 @@ import UIKit
 
 class CartasRitualViewController: UIViewController {
 
+    //MARK: - OUTLETS
+
+    @IBOutlet weak var backgroundImage: UIView!
+    @IBOutlet weak var cardListTable: UITableView!
+    
+    //MARK: - VARIABLES
+    
+    let search = UISearchController(searchResultsController: nil)
+    var isSearchEmpty : Bool {return search.searchBar.text?.isEmpty ?? true}
+    var isFiltering : Bool {return search.isActive && !isSearchEmpty}
+    var recibeSearch : String = ""
+    var arrCartasRitual: [DataCard] = []
+    
+    
+    //MARK: - LIFE · CYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setUpCartasRitual()
+        setUpSearchBar()
+        setUpSearchBarProperties()
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    override func viewDidAppear(_ animated: Bool) {
+        getCardsList()
     }
-    */
+    
+    //MARK: - FUNCTIONS
+    
 
+    private func getCardsList() {
+        self.view.activityStartAnimating(activityColor: .white, backgroundColor: UIColor.black.withAlphaComponent(0.5))
+        let cardsWS = Cards_WS()
+        cardsWS.getCardResponse { respuesta, error in
+            if error == nil {
+                self.arrCartasRitual = self.getAndSplitCard(with: respuesta?.dataCard ?? [], andType: "Ritual Effect Monster")
+                DispatchQueue.main.async {
+                    self.cardListTable.reloadData()
+                    self.view.activityStopAnimating()
+                }
+            }else {
+                DispatchQueue.main.async {
+                    self.showAlert(WithTitle: "Error", andMessage: "Ocurrio un error en el llamdo a Servicio")
+                }
+            }
+        }
+    }
+     
+    func setUpCartasRitual(){
+        self.cardListTable.dataSource = self
+        self.cardListTable.delegate = self
+        self.cardListTable.register(CartasRitualTableViewCell.nib, forCellReuseIdentifier: CartasRitualTableViewCell.identifier)
+    }
+    
+    private func setUpSearchBar() {
+        self.search.searchBar.searchTextField.delegate = self
+        search.obscuresBackgroundDuringPresentation = false
+        search.searchBar.searchTextField.placeholder = "Search your Card"
+        self.navigationItem.searchController = search
+        definesPresentationContext = true
+    }
+    
+    private func setUpSearchBarProperties() {
+        search.automaticallyShowsCancelButton = true
+        search.automaticallyShowsScopeBar = true
+        search.automaticallyShowsSearchResultsController = true
+    }
+    
+    //MARK: - NAVIGATION
+
+    
+    
+    //MARK: - ACTIONS
+
+    
 }

@@ -45,7 +45,7 @@
                 <constraint firstAttribute="trailing" secondItem="7ZZ-xt-TWR" secondAttribute="trailing" constant="2" id="Tra-aP-DNO"/>
                 <constraint firstItem="7ZZ-xt-TWR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="2" id="Zsb-uG-ec5"/>
             </constraints>
-            <point key="canvasLocation" x="114" y="-11"/>
+            <point key="canvasLocation" x="112.5" y="-11.619718309859156"/>
         </view>
     </objects>
 </document>
