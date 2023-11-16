@@ -34,6 +34,8 @@ class DetailCardViewController: UIViewController {
     
     var downloadTask : URLSessionDownloadTask?
     var recibeCodable : Codable?
+    var recibeUIcontroller : UIViewController?
+
     
     
     //MARK: - LIFE · CYCLE
@@ -46,6 +48,8 @@ class DetailCardViewController: UIViewController {
         case is DataCard:
              setUpCartasMounstroinf(categoria: recibeCodable as! DataCard)
         case is DataCard:
+             setUpCartasMounstroEfectoinf(categoria: recibeCodable as! DataCard)
+        case is DataCard:
              setUpCartasMagicasInf(categoria: recibeCodable as! DataCard)
         case is DataCard:
              setUpCartasTrampaInf(categoria: recibeCodable as! DataCard)
@@ -57,6 +61,10 @@ class DetailCardViewController: UIViewController {
              setUpCartasPenduloInf(categoria: recibeCodable as! DataCard)
         case is DataCard:
              setUpCartasSynchroInf(categoria: recibeCodable as! DataCard)
+        case is DataCard:
+             setUpCartasLink(categoria: recibeCodable as! DataCard)
+        case is DataCard:
+             setUpCartasToken(categoria: recibeCodable as! DataCard)
          default:
              break
          }
@@ -79,6 +87,21 @@ class DetailCardViewController: UIViewController {
        }
         }
     
+    func setUpCartasMounstroEfectoinf(categoria : DataCard){
+        self.view.layer.backgroundColor = UIColor(patternImage: UIImage(named: "effect") ?? UIImage()).cgColor
+        self.title = categoria.name
+        self.nameCard.text = categoria.name
+        self.typeCard.text = categoria.type
+        self.archetypeCard.text = categoria.archetype
+        self.descriptionCard.text = categoria.desc
+       
+         
+        if let urlPoster = categoria.card_images,
+           let url = URL(string: "\(urlPoster[0].image_url ?? "")"){
+            downloadTask = cardImage.loadImage(url: url)
+        }
+         }
+    
     func setUpCartasMagicasInf(categoria : DataCard){
         self.view.layer.backgroundColor = UIColor(patternImage: UIImage(named: "spell") ?? UIImage()).cgColor
         self.title = categoria.name
@@ -95,6 +118,7 @@ class DetailCardViewController: UIViewController {
          }
     
     func setUpCartasTrampaInf(categoria : DataCard){
+        self.view.layer.backgroundColor = UIColor(patternImage: UIImage(named: "trap") ?? UIImage()).cgColor
         self.nameCard.text = categoria.name
         self.typeCard.text = categoria.type
         self.archetypeCard.text = categoria.archetype
@@ -108,6 +132,21 @@ class DetailCardViewController: UIViewController {
          }
     
     func setUpCartasFusionInf(categoria : DataCard){
+        self.view.layer.backgroundColor = UIColor(patternImage: UIImage(named: "fusion") ?? UIImage()).cgColor
+        self.nameCard.text = categoria.name
+        self.typeCard.text = categoria.type
+        self.archetypeCard.text = categoria.archetype
+        self.descriptionCard.text = categoria.desc
+       
+         
+        if let urlPoster = categoria.card_images,
+           let url = URL(string: "\(urlPoster[0].image_url ?? "")"){
+            downloadTask = cardImage.loadImage(url: url)
+        }
+         }
+    
+    func setUpCartasRitualInf(categoria : DataCard){
+        self.view.layer.backgroundColor = UIColor(patternImage: UIImage(named: "ritual") ?? UIImage()).cgColor
         self.nameCard.text = categoria.name
         self.typeCard.text = categoria.type
         self.archetypeCard.text = categoria.archetype
@@ -121,6 +160,7 @@ class DetailCardViewController: UIViewController {
          }
     
     func setUpCartasXYZInf(categoria : DataCard){
+        self.view.layer.backgroundColor = UIColor(patternImage: UIImage(named: "xyz") ?? UIImage()).cgColor
         self.nameCard.text = categoria.name
         self.typeCard.text = categoria.type
         self.archetypeCard.text = categoria.archetype
@@ -147,6 +187,35 @@ class DetailCardViewController: UIViewController {
          }
     
     func setUpCartasSynchroInf(categoria : DataCard){
+        
+        self.nameCard.text = categoria.name
+        self.typeCard.text = categoria.type
+        self.archetypeCard.text = categoria.archetype
+        self.descriptionCard.text = categoria.desc
+       
+         
+        if let urlPoster = categoria.card_images,
+           let url = URL(string: "\(urlPoster[0].image_url ?? "")"){
+            downloadTask = cardImage.loadImage(url: url)
+        }
+         }
+    
+    func setUpCartasLink(categoria : DataCard){
+        
+        self.nameCard.text = categoria.name
+        self.typeCard.text = categoria.type
+        self.archetypeCard.text = categoria.archetype
+        self.descriptionCard.text = categoria.desc
+       
+         
+        if let urlPoster = categoria.card_images,
+           let url = URL(string: "\(urlPoster[0].image_url ?? "")"){
+            downloadTask = cardImage.loadImage(url: url)
+        }
+         }
+    
+    func setUpCartasToken(categoria : DataCard){
+        
         self.nameCard.text = categoria.name
         self.typeCard.text = categoria.type
         self.archetypeCard.text = categoria.archetype
