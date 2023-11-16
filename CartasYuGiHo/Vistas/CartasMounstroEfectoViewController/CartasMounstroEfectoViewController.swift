@@ -62,7 +62,7 @@ class CartasMounstroEfectoViewController: UIViewController {
     func setUpCartasMounstroEfecto(){
         self.cardListTable.dataSource = self
         self.cardListTable.delegate = self
-        self.cardListTable.register(CartasMagicasTableViewCell.nib, forCellReuseIdentifier: CartasMagicasTableViewCell.identifier)
+        self.cardListTable.register(CartasMounstroEfectoTableViewCell.nib, forCellReuseIdentifier: CartasMounstroEfectoTableViewCell.identifier)
     }
     
     private func setUpSearchBar() {

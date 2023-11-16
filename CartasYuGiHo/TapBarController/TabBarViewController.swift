@@ -6,7 +6,7 @@ class TabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let view1 = self.createNavController(for: CardsListViewController(), title: "Mounstro", image: UIImage(systemName: "Yu-Gi-Oh!_(Logo)") ?? UIImage())
-        let view2 = self.createNavController(for: CardsListViewController(), title: "Mounstro", image: UIImage(systemName: "Yu-Gi-Oh!_(Logo)") ?? UIImage())
+        let view2 = self.createNavController(for: CartasMounstroEfectoViewController(), title: "M Efecto", image: UIImage(systemName: "Yu-Gi-Oh!_(Logo)") ?? UIImage())
         let view3 = self.createNavController(for: CartasMgicasViewController(), title: "Magicas", image: UIImage(systemName: "Yu-Gi-Oh!_(Logo)") ?? UIImage())
         let view4 = self.createNavController(for: CartasTrampaViewController(), title: "Trampa", image: UIImage(systemName: "Yu-Gi-Oh!_(Logo)") ?? UIImage())
         let view5 = self.createNavController(for: CartasFusionViewController(), title: "Fusion", image: UIImage(systemName: "Yu-Gi-Oh!_(Logo)") ?? UIImage())
