@@ -17,6 +17,7 @@ extension CartasMounstroEfectoViewController : UITableViewDelegate & UITableView
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let goToView = DetailCardViewController()
         goToView.recibeCodable = arrCartasMounstroEfecto[indexPath.row]
+        goToView.stringBackground = "effect"
         navigationController?.pushViewController(goToView, animated: true)
     }
     

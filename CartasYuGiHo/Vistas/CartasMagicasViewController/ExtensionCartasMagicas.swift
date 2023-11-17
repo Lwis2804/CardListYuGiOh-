@@ -17,6 +17,7 @@ extension CartasMgicasViewController : UITableViewDelegate & UITableViewDataSour
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let goToView = DetailCardViewController()
         goToView.recibeCodable = arrCartasMagicas[indexPath.row]
+        goToView.stringBackground = "spell"
         navigationController?.pushViewController(goToView, animated: true)
     }
     

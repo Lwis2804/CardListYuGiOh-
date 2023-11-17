@@ -17,6 +17,7 @@ extension CardsListViewController : UITableViewDelegate & UITableViewDataSource 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let goToView = DetailCardViewController()
         goToView.recibeCodable = arrCards[indexPath.row]
+        goToView.stringBackground = "normal"
         navigationController?.pushViewController(goToView, animated: true)
     }
     
