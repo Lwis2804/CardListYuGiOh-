@@ -58,8 +58,6 @@ class CardsListViewController: UIViewController {
         }
     }
 
-
-     
     func setUpCardTablelist(){
         self.cardListTable.dataSource = self
         self.cardListTable.delegate = self

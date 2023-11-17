@@ -79,7 +79,6 @@ class DetailCardViewController: UIViewController {
        self.nameCard.text = categoria.name
        self.typeCard.text = categoria.type
        self.archetypeCard.text = categoria.archetype
-       self.descriptionCard.text = categoria.desc
        self.textView.text = categoria.desc
       
         
@@ -95,8 +94,8 @@ class DetailCardViewController: UIViewController {
         self.nameCard.text = categoria.name
         self.typeCard.text = categoria.type
         self.archetypeCard.text = categoria.archetype
-        self.descriptionCard.text = categoria.desc
-       
+        self.textView.text = categoria.desc
+
          
         if let urlPoster = categoria.card_images,
            let url = URL(string: "\(urlPoster[0].image_url ?? "")"){
@@ -110,8 +109,8 @@ class DetailCardViewController: UIViewController {
         self.nameCard.text = categoria.name
         self.typeCard.text = categoria.type
         self.archetypeCard.text = categoria.archetype
-        self.descriptionCard.text = categoria.desc
-       
+        self.textView.text = categoria.desc
+
          
         if let urlPoster = categoria.card_images,
            let url = URL(string: "\(urlPoster[0].image_url ?? "")"){
@@ -124,8 +123,8 @@ class DetailCardViewController: UIViewController {
         self.nameCard.text = categoria.name
         self.typeCard.text = categoria.type
         self.archetypeCard.text = categoria.archetype
-        self.descriptionCard.text = categoria.desc
-       
+        self.textView.text = categoria.desc
+
          
         if let urlPoster = categoria.card_images,
            let url = URL(string: "\(urlPoster[0].image_url ?? "")"){
@@ -138,8 +137,8 @@ class DetailCardViewController: UIViewController {
         self.nameCard.text = categoria.name
         self.typeCard.text = categoria.type
         self.archetypeCard.text = categoria.archetype
-        self.descriptionCard.text = categoria.desc
-       
+        self.textView.text = categoria.desc
+
          
         if let urlPoster = categoria.card_images,
            let url = URL(string: "\(urlPoster[0].image_url ?? "")"){
@@ -152,8 +151,8 @@ class DetailCardViewController: UIViewController {
         self.nameCard.text = categoria.name
         self.typeCard.text = categoria.type
         self.archetypeCard.text = categoria.archetype
-        self.descriptionCard.text = categoria.desc
-       
+        self.textView.text = categoria.desc
+
          
         if let urlPoster = categoria.card_images,
            let url = URL(string: "\(urlPoster[0].image_url ?? "")"){
@@ -166,8 +165,8 @@ class DetailCardViewController: UIViewController {
         self.nameCard.text = categoria.name
         self.typeCard.text = categoria.type
         self.archetypeCard.text = categoria.archetype
-        self.descriptionCard.text = categoria.desc
-       
+        self.textView.text = categoria.desc
+
          
         if let urlPoster = categoria.card_images,
            let url = URL(string: "\(urlPoster[0].image_url ?? "")"){
@@ -179,8 +178,8 @@ class DetailCardViewController: UIViewController {
         self.nameCard.text = categoria.name
         self.typeCard.text = categoria.type
         self.archetypeCard.text = categoria.archetype
-        self.descriptionCard.text = categoria.desc
-       
+        self.textView.text = categoria.desc
+
          
         if let urlPoster = categoria.card_images,
            let url = URL(string: "\(urlPoster[0].image_url ?? "")"){
@@ -193,8 +192,8 @@ class DetailCardViewController: UIViewController {
         self.nameCard.text = categoria.name
         self.typeCard.text = categoria.type
         self.archetypeCard.text = categoria.archetype
-        self.descriptionCard.text = categoria.desc
-       
+        self.textView.text = categoria.desc
+
          
         if let urlPoster = categoria.card_images,
            let url = URL(string: "\(urlPoster[0].image_url ?? "")"){
@@ -207,8 +206,8 @@ class DetailCardViewController: UIViewController {
         self.nameCard.text = categoria.name
         self.typeCard.text = categoria.type
         self.archetypeCard.text = categoria.archetype
-        self.descriptionCard.text = categoria.desc
-       
+        self.textView.text = categoria.desc
+
          
         if let urlPoster = categoria.card_images,
            let url = URL(string: "\(urlPoster[0].image_url ?? "")"){
@@ -221,8 +220,8 @@ class DetailCardViewController: UIViewController {
         self.nameCard.text = categoria.name
         self.typeCard.text = categoria.type
         self.archetypeCard.text = categoria.archetype
-        self.descriptionCard.text = categoria.desc
-       
+        self.textView.text = categoria.desc
+
          
         if let urlPoster = categoria.card_images,
            let url = URL(string: "\(urlPoster[0].image_url ?? "")"){
