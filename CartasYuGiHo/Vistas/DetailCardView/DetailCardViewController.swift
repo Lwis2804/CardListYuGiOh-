@@ -28,6 +28,7 @@ class DetailCardViewController: UIViewController {
         didSet{self.descriptionCard.layer.cornerRadius = 20}
     }
     
+    @IBOutlet weak var textView: UITextView!
     
     
     //MARK: - VARIABLES
@@ -79,6 +80,7 @@ class DetailCardViewController: UIViewController {
        self.typeCard.text = categoria.type
        self.archetypeCard.text = categoria.archetype
        self.descriptionCard.text = categoria.desc
+       self.textView.text = categoria.desc
       
         
        if let urlPoster = categoria.card_images,

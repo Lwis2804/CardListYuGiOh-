@@ -15,7 +15,7 @@ final class Cards_WS {
  
     
     
-    func getCardResponse(withHandler: @escaping blkCardsResponse) {
+    func getCardResponse(withSearch: String, withHandler: @escaping blkCardsResponse) {
         
         let urlCardResponse = URL(string: "https://db.ygoprodeck.com/api/v7/cardinfo.php") ?? URL(fileURLWithPath: "")
         
@@ -30,9 +30,7 @@ final class Cards_WS {
             }
         }.resume()
     }
-    
-    
-  
+
     
     
 }

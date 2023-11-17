@@ -34,17 +34,17 @@ class CartasMounstroEfectoViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.getCardsList()
+        self.getCardsList(withSearch: "")
     }
 
 
     //MARK: - FUNCTIONS
     
 
-    private func getCardsList() {
+    private func getCardsList(withSearch search : String) {
         self.view.activityStartAnimating(activityColor: .white, backgroundColor: UIColor.black.withAlphaComponent(0.5))
         let cardsWS = Cards_WS()
-        cardsWS.getCardResponse { respuesta, error in
+        cardsWS.getCardResponse(withSearch: search) { respuesta, error in
             if error == nil {
                 self.arrCartasMounstroEfecto = self.getAndSplitCard(with: respuesta?.dataCard ?? [], andType: "Effect Monster")
                 DispatchQueue.main.async {

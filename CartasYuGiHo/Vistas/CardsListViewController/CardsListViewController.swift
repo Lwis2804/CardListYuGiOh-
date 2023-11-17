@@ -32,16 +32,16 @@ class CardsListViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.getCardsList()
+        self.getCardsList(withSearch: "")
     }
 
     //MARK: - FUNCTIONS
     
     
-    private func getCardsList() {
+    public func getCardsList(withSearch search : String) {
         self.view.activityStartAnimating(activityColor: .white, backgroundColor: UIColor.black.withAlphaComponent(0.5))
         let cardsWS = Cards_WS()
-        cardsWS.getCardResponse { respuesta, error in
+        cardsWS.getCardResponse(withSearch: search){ respuesta, error in
             if error == nil {
                 self.arrCards = self.getAndSplitCard(with: respuesta?.dataCard ?? [], andType: "Normal Monster")
                 DispatchQueue.main.async {
@@ -52,15 +52,13 @@ class CardsListViewController: UIViewController {
                 DispatchQueue.main.async {
                     self.showAlert(WithTitle: "Error", andMessage: "Ocurrio un error en el llamdo a Servicio")
                     self.view.activityStopAnimating()
+                    self.cardListTable.reloadData()
                 }
             }
         }
     }
-    
 
 
-    
-    
      
     func setUpCardTablelist(){
         self.cardListTable.dataSource = self

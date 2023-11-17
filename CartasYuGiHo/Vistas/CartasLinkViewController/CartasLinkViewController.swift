@@ -32,16 +32,16 @@ class CartasLinkViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        getCardsList()
+        getCardsList(withSearch: "" )
     }
     
     //MARK: - FUNCTIONS
     
 
-    private func getCardsList() {
+    private func getCardsList(withSearch search : String) {
         self.view.activityStartAnimating(activityColor: .white, backgroundColor: UIColor.black.withAlphaComponent(0.5))
         let cardsWS = Cards_WS()
-        cardsWS.getCardResponse { respuesta, error in
+        cardsWS.getCardResponse(withSearch: search) { respuesta, error in
             if error == nil {
                 self.arrCartasLink = self.getAndSplitCard(with: respuesta?.dataCard ?? [], andType: "Link Monster")
                 DispatchQueue.main.async {

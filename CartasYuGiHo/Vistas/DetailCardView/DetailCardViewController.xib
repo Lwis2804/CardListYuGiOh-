@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -15,6 +16,7 @@
                 <outlet property="cardImage" destination="wdp-00-gC4" id="Vdq-YS-0pl"/>
                 <outlet property="descriptionCard" destination="XhU-m4-LL4" id="8PE-Ve-zKk"/>
                 <outlet property="nameCard" destination="nef-Xu-za4" id="JNk-Zb-UQf"/>
+                <outlet property="textView" destination="oLK-gn-YfQ" id="Tu5-e3-7Da"/>
                 <outlet property="typeCard" destination="4cN-91-IEp" id="Eal-TT-b0K"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -30,7 +32,7 @@
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wdp-00-gC4">
                             <rect key="frame" x="2" y="2" width="312" height="485"/>
                             <constraints>
-                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="400" id="DWj-Sa-tlC"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="300" id="DWj-Sa-tlC"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nef-Xu-za4">
@@ -69,10 +71,24 @@
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XhU-m4-LL4">
                             <rect key="frame" x="2" y="543" width="312" height="19"/>
                             <color key="backgroundColor" red="0.8671132922" green="0.85113257170000001" blue="0.83853656050000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="19" id="2ZL-J0-cv7"/>
+                            </constraints>
                             <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="17"/>
                             <color key="textColor" red="0.88608771559999999" green="0.4996563792" blue="0.0106566539" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oLK-gn-YfQ">
+                            <rect key="frame" x="38" y="376" width="240" height="80"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="80" id="j5M-fG-6Sr"/>
+                            </constraints>
+                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                            <color key="textColor" systemColor="labelColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
                     </subviews>
                     <color key="backgroundColor" red="0.88608771559999999" green="0.4996563792" blue="0.0106566539" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
@@ -83,13 +99,16 @@
                         <constraint firstAttribute="trailing" secondItem="XhU-m4-LL4" secondAttribute="trailing" constant="2" id="EMK-mE-Idz"/>
                         <constraint firstItem="XhU-m4-LL4" firstAttribute="leading" secondItem="azd-uI-TMf" secondAttribute="leading" constant="2" id="GLp-TB-3qI"/>
                         <constraint firstItem="ueu-R2-urg" firstAttribute="leading" secondItem="4cN-91-IEp" secondAttribute="trailing" constant="2" id="NCe-nf-PVI"/>
+                        <constraint firstItem="nef-Xu-za4" firstAttribute="top" secondItem="oLK-gn-YfQ" secondAttribute="bottom" constant="33" id="QOc-wy-7Tx"/>
                         <constraint firstItem="wdp-00-gC4" firstAttribute="leading" secondItem="azd-uI-TMf" secondAttribute="leading" constant="2" id="Qap-JF-6B8"/>
                         <constraint firstItem="nef-Xu-za4" firstAttribute="leading" secondItem="azd-uI-TMf" secondAttribute="leading" constant="2" id="VNa-18-S43"/>
                         <constraint firstItem="ueu-R2-urg" firstAttribute="top" secondItem="nef-Xu-za4" secondAttribute="bottom" constant="2" id="W0r-2y-Ags"/>
                         <constraint firstAttribute="bottom" secondItem="XhU-m4-LL4" secondAttribute="bottom" constant="2" id="ZR7-2W-knM"/>
                         <constraint firstItem="4cN-91-IEp" firstAttribute="top" secondItem="nef-Xu-za4" secondAttribute="bottom" constant="2" id="alo-Cv-2Vb"/>
+                        <constraint firstItem="oLK-gn-YfQ" firstAttribute="leading" secondItem="azd-uI-TMf" secondAttribute="leading" constant="38" id="fb6-kt-nfQ"/>
                         <constraint firstAttribute="trailing" secondItem="wdp-00-gC4" secondAttribute="trailing" constant="2" id="ffL-BB-i7f"/>
                         <constraint firstItem="wdp-00-gC4" firstAttribute="top" secondItem="azd-uI-TMf" secondAttribute="top" constant="2" id="uG4-04-YZ1"/>
+                        <constraint firstAttribute="trailing" secondItem="oLK-gn-YfQ" secondAttribute="trailing" constant="38" id="urp-J2-aix"/>
                         <constraint firstItem="nef-Xu-za4" firstAttribute="top" secondItem="wdp-00-gC4" secondAttribute="bottom" constant="2" id="vbh-Ap-IlK"/>
                     </constraints>
                 </view>
@@ -102,7 +121,15 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="azd-uI-TMf" secondAttribute="trailing" constant="2" id="Vxx-YH-CaZ"/>
                 <constraint firstItem="azd-uI-TMf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="2" id="wBf-qN-gMR"/>
             </constraints>
-            <point key="canvasLocation" x="91" y="-11"/>
+            <point key="canvasLocation" x="90" y="-11.619718309859156"/>
         </view>
     </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
