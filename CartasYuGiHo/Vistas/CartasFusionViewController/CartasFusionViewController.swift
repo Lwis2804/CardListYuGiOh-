@@ -41,7 +41,7 @@ class CartasFusionViewController: UIViewController {
     private func getCardsList(withSearch search : String) {
         self.view.activityStartAnimating(activityColor: .white, backgroundColor: UIColor.black.withAlphaComponent(0.5))
         let cardsWS = Cards_WS()
-        cardsWS.getCardResponse(withSearch: search) { respuesta, error in
+        cardsWS.getCardResponse(withHandler: { respuesta, error in
             if error == nil {
                 self.arrCartasFusion = self.getAndSplitCard(with: respuesta?.dataCard ?? [], andType: "Fusion Monster")
                 DispatchQueue.main.async {
@@ -53,7 +53,7 @@ class CartasFusionViewController: UIViewController {
                     self.showAlert(WithTitle: "Error", andMessage: "Ocurrio un error en el llamdo a Servicio")
                 }
             }
-        }
+        })
     }
      
     func setUpCartasFusion(){

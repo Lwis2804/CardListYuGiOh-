@@ -44,7 +44,7 @@ class CartasMounstroEfectoViewController: UIViewController {
     private func getCardsList(withSearch search : String) {
         self.view.activityStartAnimating(activityColor: .white, backgroundColor: UIColor.black.withAlphaComponent(0.5))
         let cardsWS = Cards_WS()
-        cardsWS.getCardResponse(withSearch: search) { respuesta, error in
+        cardsWS.getCardResponse(withHandler: { respuesta, error in
             if error == nil {
                 self.arrCartasMounstroEfecto = self.getAndSplitCard(with: respuesta?.dataCard ?? [], andType: "Effect Monster")
                 DispatchQueue.main.async {
@@ -56,7 +56,7 @@ class CartasMounstroEfectoViewController: UIViewController {
                     self.showAlert(WithTitle: "Error", andMessage: "Ocurrio un error en el llamdo a Servicio")
                 }
             }
-        }
+        })
     }
      
     func setUpCartasMounstroEfecto(){

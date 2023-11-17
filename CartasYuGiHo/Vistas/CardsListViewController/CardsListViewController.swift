@@ -10,7 +10,7 @@ import UIKit
 class CardsListViewController: UIViewController {
     
     //MARK: - OUTLETS
-
+    
     @IBOutlet weak var backgroundImage: UIView!
     @IBOutlet weak var cardListTable: UITableView!
     
@@ -32,16 +32,16 @@ class CardsListViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.getCardsList(withSearch: "")
+        self.getAllCardsList()
     }
-
+    
     //MARK: - FUNCTIONS
     
     
-    public func getCardsList(withSearch search : String) {
+    public func getAllCardsList() {
         self.view.activityStartAnimating(activityColor: .white, backgroundColor: UIColor.black.withAlphaComponent(0.5))
         let cardsWS = Cards_WS()
-        cardsWS.getCardResponse(withSearch: search){ respuesta, error in
+        cardsWS.getCardResponse(withHandler:{ respuesta, error in
             if error == nil {
                 self.arrCards = self.getAndSplitCard(with: respuesta?.dataCard ?? [], andType: "Normal Monster")
                 DispatchQueue.main.async {
@@ -55,35 +55,68 @@ class CardsListViewController: UIViewController {
                     self.cardListTable.reloadData()
                 }
             }
+        })
+    }
+    
+    public func getCardsList(withSearch search : String) {
+        print(search)
+        self.arrCards = []
+        self.view.activityStartAnimating(activityColor: .white, backgroundColor: UIColor.black.withAlphaComponent(0.5))
+        let cardsWS = Cards_WS()
+        cardsWS.getCardSearch(withSearch: search,withHandler:{ respuesta, error in
+            if error == nil {
+                self.arrCards = self.getAndSplitCard(with: respuesta?.dataCard ?? [], andType: "Normal Monster")
+                DispatchQueue.main.async {
+                    if (self.arrCards.count != 0) && (self.arrCards.count > 0) {
+                        self.cardListTable.reloadData()
+                        self.view.activityStopAnimating()
+                    }else{
+                        self.showAlert(WithTitle: "Error", andMessage: "Ocurrio un error en el llamdo a Servicio")
+                        self.view.activityStopAnimating()
+                        self.cardListTable.reloadData()
+                    }
+                }
+            }
+            else{
+                DispatchQueue.main.async {
+                    self.showAlert(WithTitle: "Error", andMessage: "Ocurrio un error en el llamdo a Servicio")
+                    self.view.activityStopAnimating()
+                    self.cardListTable.reloadData()
+                }
+            }
+        })
+    }
+    
+    
+    
+        
+        func setUpCardTablelist(){
+            self.cardListTable.dataSource = self
+            self.cardListTable.delegate = self
+            self.cardListTable.register(CardListTableViewCell.nib, forCellReuseIdentifier: CardListTableViewCell.identifier)
         }
+        
+        
+        private func setUpSearchBar() {
+            self.search.searchBar.searchTextField.delegate = self
+            search.obscuresBackgroundDuringPresentation = false
+            search.searchBar.searchTextField.placeholder = "Search your Card"
+            self.navigationItem.searchController = search
+            definesPresentationContext = true
+        }
+        
+        private func setUpSearchBarProperties() {
+            search.automaticallyShowsCancelButton = true
+            search.automaticallyShowsScopeBar = true
+            search.automaticallyShowsSearchResultsController = true
+        }
+        
+        //MARK: - NAVIGATION
+        
+        
+        
+        //MARK: - ACTIONS
+        
+        
     }
 
-    func setUpCardTablelist(){
-        self.cardListTable.dataSource = self
-        self.cardListTable.delegate = self
-        self.cardListTable.register(CardListTableViewCell.nib, forCellReuseIdentifier: CardListTableViewCell.identifier)
-    }
-    
-  
-    private func setUpSearchBar() {
-        self.search.searchBar.searchTextField.delegate = self
-        search.obscuresBackgroundDuringPresentation = false
-        search.searchBar.searchTextField.placeholder = "Search your Card"
-        self.navigationItem.searchController = search
-        definesPresentationContext = true
-    }
-    
-    private func setUpSearchBarProperties() {
-        search.automaticallyShowsCancelButton = true
-        search.automaticallyShowsScopeBar = true
-        search.automaticallyShowsSearchResultsController = true
-    }
-    
-    //MARK: - NAVIGATION
-
-    
-    
-    //MARK: - ACTIONS
-
-    
-}

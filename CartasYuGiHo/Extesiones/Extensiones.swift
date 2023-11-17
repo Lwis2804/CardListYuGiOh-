@@ -83,3 +83,11 @@ extension UIView{
 }
 
 
+//MARK: - STRING
+
+extension String {
+    
+    func addMissingSpaceCharater(from: String) -> String {
+        return from.replacingOccurrences(of: " ", with: "%20")
+    }
+}

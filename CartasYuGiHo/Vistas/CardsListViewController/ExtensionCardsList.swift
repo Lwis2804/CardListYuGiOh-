@@ -42,21 +42,19 @@ extension CardsListViewController : UISearchResultsUpdating{
 extension CardsListViewController : UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField.text == ""{
-            getCardsList(withSearch: "") // busqueda con campo vacio, actualiza con letra borrada
-            return true
-        }else {
-            getCardsList(withSearch: textField.text ?? "")
-            return true
-        }
+        self.getCardsList(withSearch: textField.text ?? "")
+        return true
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if string == "" && range.length == 1 && range.location == 0{
-            getCardsList(withSearch: "")
+        print(string)
+        print("range.length \(range.length)")
+        print("range.location\(range.location)")
+        if string == "" && range.length == 1 && range.location >= 0{
+            getCardsList(withSearch: "") // otra funcion que busque elelemtno en un arreglo con un key == textfiel.text
             return true
         }
-        getCardsList(withSearch: textField.text ?? "")
+        getCardsList(withSearch: textField.text ?? "")// otra funcion que busque elelemtno en un arreglo con un key == textfiel.text
         return true
     }
 }
