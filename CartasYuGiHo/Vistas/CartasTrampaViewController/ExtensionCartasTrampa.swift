@@ -16,6 +16,7 @@ extension CartasTrampaViewController : UITableViewDelegate & UITableViewDataSour
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let goToView = DetailCardViewController()
         goToView.recibeCodable = arrCartasTrampa[indexPath.row]
+        goToView.stringBackground = "trap"
         navigationController?.pushViewController(goToView, animated: true)
     }
     

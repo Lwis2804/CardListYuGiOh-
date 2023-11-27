@@ -15,6 +15,7 @@ extension CartasPenduloViewController : UITableViewDelegate & UITableViewDataSou
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let goToView = DetailCardViewController()
         goToView.recibeCodable = arrCartasPendulo[indexPath.row]
+        goToView.stringBackground = ""
         navigationController?.pushViewController(goToView, animated: true)
     }
     

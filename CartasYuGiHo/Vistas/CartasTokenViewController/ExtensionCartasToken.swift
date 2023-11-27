@@ -16,6 +16,7 @@ extension CartasTokenViewController : UITableViewDelegate & UITableViewDataSourc
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let goToView = DetailCardViewController()
         goToView.recibeCodable = arrCartasToken[indexPath.row]
+        goToView.stringBackground = "token"
         navigationController?.pushViewController(goToView, animated: true)
     }
     

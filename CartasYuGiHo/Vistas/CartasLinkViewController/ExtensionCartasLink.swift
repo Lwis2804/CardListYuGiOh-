@@ -16,6 +16,7 @@ extension CartasLinkViewController : UITableViewDelegate & UITableViewDataSource
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let goToView = DetailCardViewController()
         goToView.recibeCodable = arrCartasLink[indexPath.row]
+        goToView.stringBackground = "link"
         navigationController?.pushViewController(goToView, animated: true)
     }
     

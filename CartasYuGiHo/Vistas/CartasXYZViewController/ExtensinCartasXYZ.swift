@@ -16,6 +16,7 @@ extension CartasXYZViewController : UITableViewDelegate & UITableViewDataSource 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let goToView = DetailCardViewController()
         goToView.recibeCodable = arrCartasXYZ[indexPath.row]
+        goToView.stringBackground = "xyz"
         navigationController?.pushViewController(goToView, animated: true)
     }
     

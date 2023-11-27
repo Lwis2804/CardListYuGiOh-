@@ -16,6 +16,7 @@ extension CartasFusionViewController : UITableViewDelegate & UITableViewDataSour
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let goToView = DetailCardViewController()
         goToView.recibeCodable = arrCartasFusion[indexPath.row]
+        goToView.stringBackground = "fusion"
         navigationController?.pushViewController(goToView, animated: true)
     }
     

@@ -16,6 +16,7 @@ extension CartasRitualViewController : UITableViewDelegate & UITableViewDataSour
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let goToView = DetailCardViewController()
         goToView.recibeCodable = arrCartasRitual[indexPath.row]
+        goToView.stringBackground = "ritual"
         navigationController?.pushViewController(goToView, animated: true)
     }
     
