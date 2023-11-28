@@ -46,7 +46,12 @@ extension UIViewController {
         }
         return monsterCard
     }
+    
+
+    
 }
+
+
 
 
 
@@ -91,3 +96,5 @@ extension String {
         return from.replacingOccurrences(of: " ", with: "%20")
     }
 }
+
+

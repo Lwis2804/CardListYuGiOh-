@@ -20,6 +20,9 @@ class CardsListViewController: UIViewController {
     var isFiltering : Bool {return search.isActive && !isSearchEmpty}
     var recibeSearch : String = ""
     var arrCards: [DataCard] = []
+    var arrCardFilter : [DataCard] = []
+    var arrMonsters : [DataCard]?
+    
     
     
     //MARK: - LIFE · CYCLE
@@ -43,7 +46,8 @@ class CardsListViewController: UIViewController {
         let cardsWS = Cards_WS()
         cardsWS.getCardResponse(withHandler:{ respuesta, error in
             if error == nil {
-                self.arrCards = self.getAndSplitCard(with: respuesta?.dataCard ?? [], andType: "Normal Monster")
+                self.arrMonsters = self.getAndSplitCard(with: respuesta?.dataCard ?? [], andType: "Normal Monster")
+                self.arrCards.removeAll()
                 DispatchQueue.main.async {
                     self.cardListTable.reloadData()
                     self.view.activityStopAnimating()
@@ -98,7 +102,8 @@ class CardsListViewController: UIViewController {
         
         
         private func setUpSearchBar() {
-            self.search.searchBar.searchTextField.delegate = self
+          //  self.search.searchBar.searchTextField.delegate = self
+            search.searchResultsUpdater = self
             search.obscuresBackgroundDuringPresentation = false
             search.searchBar.searchTextField.placeholder = "Search your Card"
             self.navigationItem.searchController = search
@@ -110,6 +115,8 @@ class CardsListViewController: UIViewController {
             search.automaticallyShowsScopeBar = true
             search.automaticallyShowsSearchResultsController = true
         }
+    
+
         
         //MARK: - NAVIGATION
         
