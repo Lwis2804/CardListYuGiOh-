@@ -34,63 +34,66 @@
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4cN-91-IEp">
-                            <rect key="frame" x="2" y="515" width="155" height="25"/>
-                            <color key="backgroundColor" red="0.8671132922" green="0.85113257170000001" blue="0.83853656050000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <rect key="frame" x="10" y="515" width="155" height="25"/>
+                            <color key="backgroundColor" red="0.8671132922" green="0.85113257170000001" blue="0.83853656050000003" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.8671132922" green="0.85113257170000001" blue="0.83853656050000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="25" id="ijZ-Ib-MjN"/>
                                 <constraint firstAttribute="width" constant="155" id="mgM-Od-0kh"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="17"/>
-                            <color key="textColor" red="0.88608771559999999" green="0.4996563792" blue="0.0106566539" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nef-Xu-za4">
-                            <rect key="frame" x="2" y="488" width="312" height="25"/>
-                            <color key="backgroundColor" red="0.8671132922" green="0.85113257170000001" blue="0.83853656050000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <rect key="frame" x="2" y="488" width="304" height="25"/>
+                            <color key="backgroundColor" red="0.8671132922" green="0.85113257170000001" blue="0.83853656050000003" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.8671132922" green="0.85113257170000001" blue="0.83853656050000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="25" id="kAZ-eB-1Ml"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="17"/>
-                            <color key="textColor" red="0.88608771559999999" green="0.4996563792" blue="0.0106566539" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oLK-gn-YfQ">
-                            <rect key="frame" x="2" y="438" width="312" height="124"/>
-                            <color key="backgroundColor" red="0.8671132922" green="0.85113257170000001" blue="0.83853656050000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <rect key="frame" x="10" y="438" width="296" height="124"/>
+                            <color key="backgroundColor" red="0.8671132922" green="0.85113257170000001" blue="0.83853656050000003" alpha="0.69633797146626653" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.8671132922" green="0.85113257170000001" blue="0.83853656050000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="124" id="0ML-oc-5qe"/>
                             </constraints>
                             <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                            <color key="textColor" red="0.88608771559999999" green="0.4996563792" blue="0.0106566539" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="12"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                         </textView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Archetype" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ueu-R2-urg">
-                            <rect key="frame" x="159" y="515" width="155" height="25"/>
-                            <color key="backgroundColor" red="0.8671132922" green="0.85113257170000001" blue="0.83853656050000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <rect key="frame" x="151" y="515" width="155" height="25"/>
+                            <color key="backgroundColor" red="0.8671132922" green="0.85113257170000001" blue="0.83853656050000003" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.8671132922" green="0.85113257170000001" blue="0.83853656050000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="155" id="j6o-XU-jga"/>
                                 <constraint firstAttribute="height" constant="25" id="sqO-1p-rNr"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="17"/>
-                            <color key="textColor" red="0.88608771559999999" green="0.4996563792" blue="0.0106566539" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="oLK-gn-YfQ" secondAttribute="trailing" constant="2" id="30t-lt-VZI"/>
-                        <constraint firstAttribute="trailing" secondItem="ueu-R2-urg" secondAttribute="trailing" constant="2" id="9rr-OY-b6g"/>
-                        <constraint firstAttribute="trailing" secondItem="nef-Xu-za4" secondAttribute="trailing" constant="2" id="9wS-bX-Li5"/>
+                        <constraint firstAttribute="trailing" secondItem="oLK-gn-YfQ" secondAttribute="trailing" constant="10" id="30t-lt-VZI"/>
+                        <constraint firstAttribute="trailing" secondItem="ueu-R2-urg" secondAttribute="trailing" constant="10" id="9rr-OY-b6g"/>
                         <constraint firstAttribute="trailing" secondItem="wdp-00-gC4" secondAttribute="trailing" constant="2" id="Jd6-97-hjO"/>
                         <constraint firstItem="nef-Xu-za4" firstAttribute="leading" secondItem="azd-uI-TMf" secondAttribute="leading" constant="2" id="Sof-7t-Zw2"/>
                         <constraint firstAttribute="bottom" secondItem="oLK-gn-YfQ" secondAttribute="bottom" constant="2" id="UXX-JW-CYN"/>
-                        <constraint firstItem="4cN-91-IEp" firstAttribute="leading" secondItem="azd-uI-TMf" secondAttribute="leading" constant="2" id="WoG-w6-yjG"/>
-                        <constraint firstItem="oLK-gn-YfQ" firstAttribute="leading" secondItem="azd-uI-TMf" secondAttribute="leading" constant="2" id="Xij-aj-NCq"/>
+                        <constraint firstItem="4cN-91-IEp" firstAttribute="leading" secondItem="azd-uI-TMf" secondAttribute="leading" constant="10" id="WoG-w6-yjG"/>
+                        <constraint firstItem="oLK-gn-YfQ" firstAttribute="leading" secondItem="azd-uI-TMf" secondAttribute="leading" constant="10" id="Xij-aj-NCq"/>
                         <constraint firstItem="wdp-00-gC4" firstAttribute="top" secondItem="azd-uI-TMf" secondAttribute="top" constant="2" id="btm-HW-Q86"/>
                         <constraint firstItem="4cN-91-IEp" firstAttribute="top" secondItem="nef-Xu-za4" secondAttribute="bottom" constant="2" id="eLP-ny-1Rc"/>
                         <constraint firstItem="ueu-R2-urg" firstAttribute="top" secondItem="nef-Xu-za4" secondAttribute="bottom" constant="2" id="mw6-dA-e4u"/>
                         <constraint firstItem="nef-Xu-za4" firstAttribute="top" secondItem="wdp-00-gC4" secondAttribute="bottom" constant="2" id="n1X-gt-7oe"/>
-                        <constraint firstAttribute="trailing" secondItem="nef-Xu-za4" secondAttribute="trailing" constant="2" id="ujO-Pb-fdk"/>
+                        <constraint firstAttribute="trailing" secondItem="nef-Xu-za4" secondAttribute="trailing" constant="10" id="ujO-Pb-fdk"/>
                         <constraint firstItem="wdp-00-gC4" firstAttribute="leading" secondItem="azd-uI-TMf" secondAttribute="leading" constant="2" id="xv1-Fp-DIu"/>
                     </constraints>
                 </view>
