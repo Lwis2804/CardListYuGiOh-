@@ -9,12 +9,12 @@ import UIKit
 
 class CardsListViewController: UIViewController {
     
-    //MARK: - OUTLETS
+    //MARK: - O U T L E T S
     
     @IBOutlet weak var backgroundImage: UIView!
     @IBOutlet weak var cardListTable: UITableView!
     
-    //MARK: - VARIABLES
+    //MARK: - V A R I A B L E S
     let search = UISearchController(searchResultsController: nil)
     var isSearchEmpty : Bool {return search.searchBar.text?.isEmpty ?? true}
     var isFiltering : Bool {return search.isActive && !isSearchEmpty}
@@ -25,7 +25,7 @@ class CardsListViewController: UIViewController {
     
     
     
-    //MARK: - LIFE · CYCLE
+    //MARK: - L I F E · C Y C L E
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpCardTablelist()
@@ -38,13 +38,12 @@ class CardsListViewController: UIViewController {
         self.getAllCardsList()
     }
     
-    //MARK: - FUNCTIONS
-    
-    
+    //MARK: - W E B · S E R V I C E
     public func getAllCardsList() {
         self.view.activityStartAnimating(activityColor: .white, backgroundColor: UIColor.black.withAlphaComponent(0.5))
         let cardsWS = Cards_WS()
-        cardsWS.getCardResponse(withHandler:{ respuesta, error in
+        cardsWS.getCardResponse(withHandler:{ [weak self]respuesta, error in
+            guard let self = self else { return }
             if error == nil {
                 self.arrMonsters = self.getAndSplitCard(with: respuesta?.dataCard ?? [], andType: "Normal Monster")
                 self.arrCards.removeAll()
@@ -62,38 +61,7 @@ class CardsListViewController: UIViewController {
         })
     }
     
-    public func getCardsList(withSearch search : String) {
-        print(search)
-        self.arrCards = []
-        self.view.activityStartAnimating(activityColor: .white, backgroundColor: UIColor.black.withAlphaComponent(0.5))
-        let cardsWS = Cards_WS()
-        cardsWS.getCardSearch(withSearch: search,withHandler:{ respuesta, error in
-            if error == nil {
-                self.arrCards = self.getAndSplitCard(with: respuesta?.dataCard ?? [], andType: "Normal Monster")
-                DispatchQueue.main.async {
-                    if (self.arrCards.count != 0) && (self.arrCards.count > 0) {
-                        self.cardListTable.reloadData()
-                        self.view.activityStopAnimating()
-                    }else{
-                        self.showAlert(WithTitle: "Error", andMessage: "Ocurrio un error en el llamdo a Servicio")
-                        self.view.activityStopAnimating()
-                        self.cardListTable.reloadData()
-                    }
-                }
-            }
-            else{
-                DispatchQueue.main.async {
-                    self.showAlert(WithTitle: "Error", andMessage: "Ocurrio un error en el llamdo a Servicio")
-                    self.view.activityStopAnimating()
-                    self.cardListTable.reloadData()
-                }
-            }
-        })
-    }
-    
-    
-    
-        
+    //MARK: - S E T · U P · V I E W
         func setUpCardTablelist(){
             self.cardListTable.dataSource = self
             self.cardListTable.delegate = self
@@ -102,7 +70,6 @@ class CardsListViewController: UIViewController {
         
         
         private func setUpSearchBar() {
-          //  self.search.searchBar.searchTextField.delegate = self
             search.searchResultsUpdater = self
             search.obscuresBackgroundDuringPresentation = false
             search.searchBar.searchTextField.placeholder = "Search your Card"
@@ -115,15 +82,5 @@ class CardsListViewController: UIViewController {
             search.automaticallyShowsScopeBar = true
             search.automaticallyShowsSearchResultsController = true
         }
-    
-
-        
-        //MARK: - NAVIGATION
-        
-        
-        
-        //MARK: - ACTIONS
-        
-        
     }
 

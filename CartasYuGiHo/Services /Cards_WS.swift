@@ -18,7 +18,6 @@ final class Cards_WS {
     func getCardResponse(withHandler: @escaping blkCardsResponse) {
         
         let urlCardResponse = URL(string: "https://db.ygoprodeck.com/api/v7/cardinfo.php") ?? URL(fileURLWithPath: "")
-        
         URLSession.shared.dataTask(with: urlCardResponse) { data, response, error in
             guard let datos = data else { return }
             do {
