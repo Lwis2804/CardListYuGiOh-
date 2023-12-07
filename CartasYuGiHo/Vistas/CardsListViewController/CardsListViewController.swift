@@ -23,8 +23,6 @@ class CardsListViewController: UIViewController {
     var arrCardFilter : [DataCard] = []
     var arrMonsters : [DataCard]?
     
-    
-    
     //MARK: - L I F E · C Y C L E
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,32 +62,32 @@ class CardsListViewController: UIViewController {
     }
     
     //MARK: - S E T · U P · V I E W
-        func setUpCardTablelist(){
-            self.cardListTable.dataSource = self
-            self.cardListTable.delegate = self
-            self.cardListTable.register(CardListTableViewCell.nib, forCellReuseIdentifier: CardListTableViewCell.identifier)
-        }
-        
-        
-        private func setUpSearchBar() {
-            search.searchResultsUpdater = self
-            search.obscuresBackgroundDuringPresentation = false
-            search.searchBar.searchTextField.placeholder = "Search your Card"
-            self.navigationItem.searchController = search
-            definesPresentationContext = true
-        }
-        
-        private func setUpSearchBarProperties() {
-            search.automaticallyShowsCancelButton = true
-            search.automaticallyShowsScopeBar = true
-            search.automaticallyShowsSearchResultsController = true
-        }
+    func setUpCardTablelist(){
+        self.cardListTable.dataSource = self
+        self.cardListTable.delegate = self
+        self.cardListTable.register(CardListTableViewCell.nib, forCellReuseIdentifier: CardListTableViewCell.identifier)
+    }
+    
+    
+    private func setUpSearchBar() {
+        search.searchResultsUpdater = self
+        search.obscuresBackgroundDuringPresentation = false
+        search.searchBar.searchTextField.placeholder = "Search your Card"
+        self.navigationItem.searchController = search
+        definesPresentationContext = true
+    }
+    
+    private func setUpSearchBarProperties() {
+        search.automaticallyShowsCancelButton = true
+        search.automaticallyShowsScopeBar = true
+        search.automaticallyShowsSearchResultsController = true
+    }
     
     
     //MARK: - S E T · U P · K E Y B O A R D
-
+    
     @objc func hideKeyboard() {
         view.endEditing(true)
     }
-    }
+}
 

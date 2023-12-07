@@ -21,9 +21,6 @@ extension CardsListViewController : UITableViewDelegate & UITableViewDataSource 
         goToView.stringBackground = "normal"
         navigationController?.pushViewController(goToView, animated: true)
     }
-    
-    
- 
 }
 
 //MARK: - U I S E A R C H  R E S U L T
