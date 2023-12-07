@@ -16,7 +16,7 @@ class CardsListViewController: UIViewController {
     
     //MARK: - V A R I A B L E S
     let search = UISearchController(searchResultsController: nil)
-    var isSearchEmpty : Bool {return search.searchBar.text?.isEmpty ?? true}
+    var isSearchEmpty : Bool {return search.searchBar.text?.isEmpty ?? true} // no termino de entender bien est parte
     var isFiltering : Bool {return search.isActive && !isSearchEmpty}
     var recibeSearch : String = ""
     var arrCards: [DataCard] = []
@@ -83,9 +83,7 @@ class CardsListViewController: UIViewController {
         search.automaticallyShowsSearchResultsController = true
     }
     
-    
     //MARK: - S E T · U P · K E Y B O A R D
-    
     @objc func hideKeyboard() {
         view.endEditing(true)
     }

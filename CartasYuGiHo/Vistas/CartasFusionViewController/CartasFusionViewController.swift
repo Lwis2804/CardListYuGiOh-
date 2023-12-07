@@ -9,21 +9,23 @@ import UIKit
 
 class CartasFusionViewController: UIViewController {
     
-    //MARK: - OUTLETS
+    //MARK: - O U T L E T S
 
     @IBOutlet weak var backgroundImage: UIView!
     @IBOutlet weak var cardListTable: UITableView!
     
-    //MARK: - VARIABLES
+    //MARK: - V A R I A B L E S
     
     let search = UISearchController(searchResultsController: nil)
     var isSearchEmpty : Bool {return search.searchBar.text?.isEmpty ?? true}
     var isFiltering : Bool {return search.isActive && !isSearchEmpty}
     var recibeSearch : String = ""
     var arrCartasFusion: [DataCard] = []
+    var arrCardFilter: [DataCard] = []
+    var arrMonster: [DataCard]? 
     
     
-    //MARK: - LIFE · CYCLE
+    //MARK: - L I F E · C Y C L E
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpCartasFusion()
@@ -32,18 +34,17 @@ class CartasFusionViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        getCardsList(withSearch: "" )
+        getCardsList()
     }
-    
-    //MARK: - FUNCTIONS
-    
-
-    private func getCardsList(withSearch search : String) {
+    //MARK: - W E B · S E R V I C E
+    private func getCardsList() {
         self.view.activityStartAnimating(activityColor: .white, backgroundColor: UIColor.black.withAlphaComponent(0.5))
         let cardsWS = Cards_WS()
-        cardsWS.getCardResponse(withHandler: { respuesta, error in
+        cardsWS.getCardResponse(withHandler: { [weak self ]respuesta, error in
+            guard let self = self else { return }
             if error == nil {
-                self.arrCartasFusion = self.getAndSplitCard(with: respuesta?.dataCard ?? [], andType: "Fusion Monster")
+                self.arrMonster = self.getAndSplitCard(with: respuesta?.dataCard ?? [], andType: "Fusion Monster")
+                self.arrCartasFusion.removeAll()
                 DispatchQueue.main.async {
                     self.cardListTable.reloadData()
                     self.view.activityStopAnimating()
@@ -51,11 +52,13 @@ class CartasFusionViewController: UIViewController {
             }else {
                 DispatchQueue.main.async {
                     self.showAlert(WithTitle: "Error", andMessage: "Ocurrio un error en el llamdo a Servicio")
+                    self.view.activityStopAnimating()
+                    self.cardListTable.reloadData()
                 }
             }
         })
     }
-     
+    //MARK: - S E T · U P · V I E W
     func setUpCartasFusion(){
         self.cardListTable.dataSource = self
         self.cardListTable.delegate = self
@@ -63,7 +66,7 @@ class CartasFusionViewController: UIViewController {
     }
     
     private func setUpSearchBar() {
-        self.search.searchBar.searchTextField.delegate = self
+        search.searchResultsUpdater = self
         search.obscuresBackgroundDuringPresentation = false
         search.searchBar.searchTextField.placeholder = "Search your Card"
         self.navigationItem.searchController = search
@@ -75,12 +78,4 @@ class CartasFusionViewController: UIViewController {
         search.automaticallyShowsScopeBar = true
         search.automaticallyShowsSearchResultsController = true
     }
-    
-    //MARK: - NAVIGATION
-
-    
-    
-    //MARK: - ACTIONS
-
-    
 }
