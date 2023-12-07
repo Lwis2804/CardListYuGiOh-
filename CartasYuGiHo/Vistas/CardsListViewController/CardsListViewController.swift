@@ -31,6 +31,8 @@ class CardsListViewController: UIViewController {
         setUpCardTablelist()
         setUpSearchBar()
         setUpSearchBarProperties()
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        view.addGestureRecognizer(tapGesture)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -43,7 +45,7 @@ class CardsListViewController: UIViewController {
         self.view.activityStartAnimating(activityColor: .white, backgroundColor: UIColor.black.withAlphaComponent(0.5))
         let cardsWS = Cards_WS()
         cardsWS.getCardResponse(withHandler:{ [weak self]respuesta, error in
-            guard let self = self else { return }
+            guard let self = self else { return } //que estoy regresando aqui
             if error == nil {
                 self.arrMonsters = self.getAndSplitCard(with: respuesta?.dataCard ?? [], andType: "Normal Monster")
                 self.arrCards.removeAll()
@@ -82,5 +84,12 @@ class CardsListViewController: UIViewController {
             search.automaticallyShowsScopeBar = true
             search.automaticallyShowsSearchResultsController = true
         }
+    
+    
+    //MARK: - S E T · U P · K E Y B O A R D
+
+    @objc func hideKeyboard() {
+        view.endEditing(true)
+    }
     }
 

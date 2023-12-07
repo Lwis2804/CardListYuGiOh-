@@ -22,6 +22,9 @@ class CartasMgicasViewController: UIViewController {
     var isFiltering : Bool {return search.isActive && !isSearchEmpty}
     var recibeSearch : String = ""
     var arrCartasMagicas: [DataCard] = []
+    var arrCardFilter : [DataCard] = []
+    var arrMonster : [DataCard]?
+    
     
     
     //MARK: - LIFE · CYCLE
@@ -34,19 +37,19 @@ class CartasMgicasViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.getCardsList(withSearch: "")
+        self.getCardsList()
     }
 
 
-    //MARK: - FUNCTIONS
-    
-
-    private func getCardsList(withSearch search : String) {
+    //MARK: - W E B · S E R V I C E
+    private func getCardsList() {
         self.view.activityStartAnimating(activityColor: .white, backgroundColor: UIColor.black.withAlphaComponent(0.5))
         let cardsWS = Cards_WS()
-        cardsWS.getCardResponse(withHandler: { respuesta, error in
+        cardsWS.getCardResponse(withHandler: { [weak self] respuesta, error in
+            guard let self = self else{ return }
             if error == nil {
-                self.arrCartasMagicas = self.getAndSplitCard(with: respuesta?.dataCard ?? [], andType: "Spell Card")
+                self.arrMonster = self.getAndSplitCard(with: respuesta?.dataCard ?? [], andType: "Spell Card")
+                self.arrCartasMagicas.removeAll()
                 DispatchQueue.main.async {
                     self.cardListTable.reloadData()
                     self.view.activityStopAnimating()
@@ -54,11 +57,14 @@ class CartasMgicasViewController: UIViewController {
             }else {
                 DispatchQueue.main.async {
                     self.showAlert(WithTitle: "Error", andMessage: "Ocurrio un error en el llamdo a Servicio")
+                    self.view.activityStopAnimating()
+                    self.cardListTable.reloadData()
                 }
             }
         })
     }
      
+    //MARK: - S E T · U P · V I E W
     func setUpCartasMagicas(){
         self.cardListTable.dataSource = self
         self.cardListTable.delegate = self
@@ -66,7 +72,7 @@ class CartasMgicasViewController: UIViewController {
     }
     
     private func setUpSearchBar() {
-        self.search.searchBar.searchTextField.delegate = self
+        search.searchResultsUpdater = self
         search.obscuresBackgroundDuringPresentation = false
         search.searchBar.searchTextField.placeholder = "Search your Card"
         self.navigationItem.searchController = search
@@ -78,12 +84,4 @@ class CartasMgicasViewController: UIViewController {
         search.automaticallyShowsScopeBar = true
         search.automaticallyShowsSearchResultsController = true
     }
-    
-    //MARK: - NAVIGATION
-
-    
-    
-    //MARK: - ACTIONS
-
-    
 }
