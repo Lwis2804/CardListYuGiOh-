@@ -35,7 +35,7 @@
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4cN-91-IEp">
                             <rect key="frame" x="10" y="515" width="155" height="25"/>
-                            <color key="backgroundColor" red="0.8671132922" green="0.85113257170000001" blue="0.83853656050000003" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="0.8671132922" green="0.85113257170000001" blue="0.83853656050000003" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                             <color key="tintColor" red="0.8671132922" green="0.85113257170000001" blue="0.83853656050000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="25" id="ijZ-Ib-MjN"/>
@@ -47,7 +47,7 @@
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nef-Xu-za4">
                             <rect key="frame" x="10" y="488" width="296" height="25"/>
-                            <color key="backgroundColor" red="0.8671132922" green="0.85113257170000001" blue="0.83853656050000003" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="0.8671132922" green="0.85113257170000001" blue="0.83853656050000003" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                             <color key="tintColor" red="0.8671132922" green="0.85113257170000001" blue="0.83853656050000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="25" id="kAZ-eB-1Ml"/>
@@ -58,7 +58,7 @@
                         </label>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oLK-gn-YfQ">
                             <rect key="frame" x="10" y="438" width="296" height="124"/>
-                            <color key="backgroundColor" red="0.8671132922" green="0.85113257170000001" blue="0.83853656050000003" alpha="0.69633797146626653" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="0.8671132922" green="0.85113257170000001" blue="0.83853656050000003" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                             <color key="tintColor" red="0.8671132922" green="0.85113257170000001" blue="0.83853656050000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="124" id="0ML-oc-5qe"/>
@@ -70,7 +70,7 @@
                         </textView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Archetype" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ueu-R2-urg">
                             <rect key="frame" x="151" y="515" width="155" height="25"/>
-                            <color key="backgroundColor" red="0.8671132922" green="0.85113257170000001" blue="0.83853656050000003" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="0.8671132922" green="0.85113257170000001" blue="0.83853656050000003" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                             <color key="tintColor" red="0.8671132922" green="0.85113257170000001" blue="0.83853656050000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="155" id="j6o-XU-jga"/>
