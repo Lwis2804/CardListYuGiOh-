@@ -22,7 +22,6 @@ extension CardsListViewController : UITableViewDelegate & UITableViewDataSource 
         navigationController?.pushViewController(goToView, animated: true)
     }
 }
-
 //MARK: - U I S E A R C H  R E S U L T
 
 extension CardsListViewController : UISearchResultsUpdating{
@@ -34,7 +33,7 @@ extension CardsListViewController : UISearchResultsUpdating{
     
     func buscarCartas(conCoincidencia: String) {
         guard let arrMonsters = arrMonsters else { return }
-        arrCardFilter = (arrMonsters.filter({ (carta : DataCard) -> Bool in
+        arrCardFilter = (arrMonsters.filter({ (carta : DataCard) -> Bool in  // no me queda clara esta parte tampoco
             return (carta.name?.lowercased().contains(conCoincidencia.lowercased()) ?? false) // lowercased convierte a minusculas
         }) )
         cardListTable.reloadData()

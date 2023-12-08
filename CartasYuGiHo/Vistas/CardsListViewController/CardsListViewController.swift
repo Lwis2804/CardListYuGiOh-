@@ -15,9 +15,9 @@ class CardsListViewController: UIViewController {
     @IBOutlet weak var cardListTable: UITableView!
     
     //MARK: - V A R I A B L E S
-    let search = UISearchController(searchResultsController: nil)
+    let search = UISearchController(searchResultsController: nil) // no termino de entender bien est parte
     var isSearchEmpty : Bool {return search.searchBar.text?.isEmpty ?? true} // no termino de entender bien est parte
-    var isFiltering : Bool {return search.isActive && !isSearchEmpty}
+    var isFiltering : Bool {return search.isActive && !isSearchEmpty} // no termino de entender bien est parte
     var recibeSearch : String = ""
     var arrCards: [DataCard] = []
     var arrCardFilter : [DataCard] = []
@@ -45,7 +45,7 @@ class CardsListViewController: UIViewController {
         cardsWS.getCardResponse(withHandler:{ [weak self]respuesta, error in
             guard let self = self else { return } //que estoy regresando aqui
             if error == nil {
-                self.arrMonsters = self.getAndSplitCard(with: respuesta?.dataCard ?? [], andType: "Normal Monster")
+                self.arrMonsters = self.getAndSplitCard(with: respuesta?.dataCard ?? [], andType: "Normal Monster")// diferencia entre arr mosnter y arrcards
                 self.arrCards.removeAll()
                 DispatchQueue.main.async {
                     self.cardListTable.reloadData()
