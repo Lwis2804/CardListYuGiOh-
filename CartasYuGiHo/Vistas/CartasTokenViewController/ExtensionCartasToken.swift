@@ -1,47 +1,43 @@
 
 import UIKit
 
-//MARK: - EXTENSIONS
+//MARK: - UI · T A B L E · V I E W · D E L E G A T E S
 extension CartasTokenViewController : UITableViewDelegate & UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arrCartasToken.count
+        return isFiltering ? arrCardsFilter.count : arrMonsters?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cCell = tableView.dequeueReusableCell(withIdentifier: CartasTokenTableViewCell.identifier, for: indexPath) as? CartasTokenTableViewCell ?? CartasTokenTableViewCell()
-        cCell.setUpCartasToken(categoria: arrCartasToken[indexPath.row])
+        let arrSetUpCards = isFiltering ? arrCardsFilter : arrMonsters
+        cCell.setUpCartasToken(categoria: arrSetUpCards?[indexPath.row] ?? DataCard())
         return cCell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let goToView = DetailCardViewController()
-        goToView.recibeCodable = arrCartasToken[indexPath.row]
+        let arrSetUpCards = isFiltering ? arrCardsFilter : arrMonsters
+        goToView.recibeCodable = arrSetUpCards?[indexPath.row]
         goToView.stringBackground = "token"
         navigationController?.pushViewController(goToView, animated: true)
     }
-    
-    
- 
 }
 
-//MARK: - UISEARCH RESULT
+//MARK: - U  I S E A R C H R E S U L T 
 
 extension CartasTokenViewController : UISearchResultsUpdating{
     
     func updateSearchResults(for searchController: UISearchController) {
-        
+        let searchBar = searchController.searchBar
+        buscarCartas(conCoincidencia: searchBar.text ?? "")
     }
     
-}
-
-
-extension CartasTokenViewController : UITextFieldDelegate {
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        return true
-    }
-    
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        return true
+    func buscarCartas(conCoincidencia: String) {
+        guard let arrMonsters = arrMonsters else { return }
+        arrCardsFilter = (arrMonsters.filter({ (carta : DataCard) -> Bool in
+            return (carta.name?.lowercased().contains(conCoincidencia.lowercased()) ?? false)  
+        }) )
+        cardListTable.reloadData()
     }
 }
+

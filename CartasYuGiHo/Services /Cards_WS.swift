@@ -9,14 +9,11 @@ import Foundation
 
 final class Cards_WS {
 
-    //MARK: - BLOQUES
+    //MARK: - B L O Q U E S
 
     public typealias blkCardsResponse = (CardResponse?, Error?) -> Void
- 
-    
     
     func getCardResponse(withHandler: @escaping blkCardsResponse) {
-        
         let urlCardResponse = URL(string: "https://db.ygoprodeck.com/api/v7/cardinfo.php") ?? URL(fileURLWithPath: "")
         URLSession.shared.dataTask(with: urlCardResponse) { data, response, error in
             guard let datos = data else { return }
