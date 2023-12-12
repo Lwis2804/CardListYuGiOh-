@@ -11,7 +11,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailCardViewController" customModule="CartasYuGiHo" customModuleProvider="target">
             <connections>
                 <outlet property="archetypeCard" destination="ueu-R2-urg" id="lHL-oL-qYV"/>
-                <outlet property="backgroundImage" destination="azd-uI-TMf" id="r7I-5p-afh"/>
+                <outlet property="backgroundImage" destination="ppY-W0-WOR" id="lfh-w9-cdP"/>
+                <outlet property="backgroundImageAuxiliar" destination="ppY-W0-WOR" id="EGW-Kq-8Td"/>
                 <outlet property="cardImage" destination="wdp-00-gC4" id="Vdq-YS-0pl"/>
                 <outlet property="nameCard" destination="nef-Xu-za4" id="JNk-Zb-UQf"/>
                 <outlet property="textView" destination="oLK-gn-YfQ" id="Tu5-e3-7Da"/>
@@ -27,6 +28,9 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="azd-uI-TMf">
                     <rect key="frame" x="2" y="2" width="316" height="564"/>
                     <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ppY-W0-WOR">
+                            <rect key="frame" x="0.0" y="0.0" width="316" height="564"/>
+                        </imageView>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wdp-00-gC4">
                             <rect key="frame" x="2" y="2" width="312" height="484"/>
                             <constraints>
@@ -93,8 +97,12 @@
                         <constraint firstItem="4cN-91-IEp" firstAttribute="top" secondItem="nef-Xu-za4" secondAttribute="bottom" constant="2" id="eLP-ny-1Rc"/>
                         <constraint firstItem="ueu-R2-urg" firstAttribute="top" secondItem="nef-Xu-za4" secondAttribute="bottom" constant="2" id="mw6-dA-e4u"/>
                         <constraint firstItem="nef-Xu-za4" firstAttribute="top" secondItem="wdp-00-gC4" secondAttribute="bottom" constant="2" id="n1X-gt-7oe"/>
+                        <constraint firstAttribute="trailing" secondItem="ppY-W0-WOR" secondAttribute="trailing" id="t3j-wj-Uih"/>
                         <constraint firstAttribute="trailing" secondItem="nef-Xu-za4" secondAttribute="trailing" constant="10" id="ujO-Pb-fdk"/>
+                        <constraint firstAttribute="bottom" secondItem="ppY-W0-WOR" secondAttribute="bottom" id="w3f-yT-UOv"/>
+                        <constraint firstItem="ppY-W0-WOR" firstAttribute="leading" secondItem="azd-uI-TMf" secondAttribute="leading" id="xTd-Sk-eEZ"/>
                         <constraint firstItem="wdp-00-gC4" firstAttribute="leading" secondItem="azd-uI-TMf" secondAttribute="leading" constant="2" id="xv1-Fp-DIu"/>
+                        <constraint firstItem="ppY-W0-WOR" firstAttribute="top" secondItem="azd-uI-TMf" secondAttribute="top" id="yPG-im-faj"/>
                     </constraints>
                 </view>
             </subviews>

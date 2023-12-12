@@ -17,14 +17,14 @@ final class Cards_WS {
         let urlCardResponse = URL(string: "https://db.ygoprodeck.com/api/v7/cardinfo.php") ?? URL(fileURLWithPath: "")
         URLSession.shared.dataTask(with: urlCardResponse) { data, response, error in
             guard let datos = data else { return }
-            do {
+            do {   //intentar hacer la siguiente accion
                 let decoder = JSONDecoder()
                 let respuesta = try decoder.decode(CardResponse.self, from: datos)
                 withHandler(respuesta, nil)
-            } catch {
+            } catch { //mandar un seguro para mandar error
                 withHandler(nil,error)
             }
-        }.resume()
+        }.resume() //para que urlsession se ejecute
     }
 
     func getCardSearch(withSearch search : String, withHandler: @escaping blkCardsResponse) {

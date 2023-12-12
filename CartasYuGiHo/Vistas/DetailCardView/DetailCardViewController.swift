@@ -14,6 +14,7 @@ class DetailCardViewController: UIViewController {
     
     //MARK: - OUTLETS
     @IBOutlet weak var backgroundImage: UIView!
+    @IBOutlet weak var backgroundImageAuxiliar: UIImageView!
     @IBOutlet weak var cardImage: UIImageView!
     @IBOutlet weak var nameCard: UILabel!{
         didSet{self.nameCard.layer.cornerRadius = 20}
@@ -37,6 +38,7 @@ class DetailCardViewController: UIViewController {
     var recibeCodable : Codable?
     var recibeUIcontroller : UIViewController?
     var stringBackground : String?
+    var isPendulum : Bool = false
     
     
     //MARK: - LIFE · CYCLE
@@ -44,19 +46,26 @@ class DetailCardViewController: UIViewController {
         super.viewDidLoad()
         downloadTask?.cancel()
         downloadTask = nil
-        self.setUp(withCard: recibeCodable as! DataCard, andBackGround: stringBackground ?? "")
+        self.setUp(withCard: recibeCodable as! DataCard, andBackGround: stringBackground ?? "", isPendulum: self.isPendulum)
     }
     
     //MARK: - FUNCTIONS
     
     
-    func setUp(withCard card : DataCard, andBackGround strBackGrd : String) {
-        self.view.layer.backgroundColor = UIColor(patternImage: UIImage(named: strBackGrd) ?? UIImage()).cgColor
+    func setUp(withCard card : DataCard, andBackGround strBackGrd : String, isPendulum : Bool = false ) { //is pendulum es falsa si no se asigna
+        if isPendulum {
+            self.view.layer.backgroundColor = UIColor(patternImage: UIImage(named: "effect") ?? UIImage()).cgColor
+            self.backgroundImageAuxiliar.image = UIImage(named: strBackGrd)
+        }else {
+            self.view.layer.backgroundColor = UIColor(patternImage: UIImage(named: strBackGrd) ?? UIImage()).cgColor
+        }
         self.title = card.name
         self.nameCard.text = card.name
         self.typeCard.text = card.type
         self.archetypeCard.text = card.archetype
         self.textView.text = card.desc
+        
+ 
        
          
         if let urlPoster = card.card_images,

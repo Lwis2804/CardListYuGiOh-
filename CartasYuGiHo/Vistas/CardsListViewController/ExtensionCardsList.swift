@@ -9,7 +9,7 @@ extension CardsListViewController : UITableViewDelegate & UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cCell = tableView.dequeueReusableCell(withIdentifier: CardListTableViewCell.identifier, for: indexPath) as? CardListTableViewCell ?? CardListTableViewCell()
-        let arrSetUpCards = isFiltering ? arrCardFilter : arrMonsters // que esta pasando aqui
+        let arrSetUpCards = isFiltering ? arrCardFilter : arrMonsters //limpieza de codigo
         cCell.setUpCardList(categoria: arrSetUpCards?[indexPath.row] ?? DataCard())
         return cCell
     }
@@ -32,8 +32,8 @@ extension CardsListViewController : UISearchResultsUpdating{
     }
     
     func buscarCartas(conCoincidencia: String) {
-        guard let arrMonsters = arrMonsters else { return }
-        arrCardFilter = (arrMonsters.filter({ (carta : DataCard) -> Bool in  // no me queda clara esta parte tampoco
+        guard let arrMonsters = arrMonsters else { return } //arrmosnters es opcional... me aseguro que no sea nulo
+        arrCardFilter = (arrMonsters.filter({ (carta : DataCard) -> Bool in  //paso carta de tipo datacard asigo o ignoro
             return (carta.name?.lowercased().contains(conCoincidencia.lowercased()) ?? false) // lowercased convierte a minusculas
         }) )
         cardListTable.reloadData()

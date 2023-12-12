@@ -18,7 +18,8 @@ extension CartasPenduloViewController : UITableViewDelegate & UITableViewDataSou
         let goToView = DetailCardViewController()
         let arrSetUpCards = isFiltering ? arrCardFilter : arrMonsters
         goToView.recibeCodable = arrSetUpCards?[indexPath.row]
-        goToView.stringBackground = ""
+        goToView.stringBackground = "Pendulum Half Texture"
+        goToView.isPendulum = true
         navigationController?.pushViewController(goToView, animated: true)
     }
 }

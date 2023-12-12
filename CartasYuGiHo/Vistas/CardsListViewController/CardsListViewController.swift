@@ -16,7 +16,9 @@ class CardsListViewController: UIViewController {
     
     //MARK: - V A R I A B L E S
     let search = UISearchController(searchResultsController: nil) // no termino de entender bien est parte
-    var isSearchEmpty : Bool {return search.searchBar.text?.isEmpty ?? true} // no termino de entender bien est parte
+    var isSearchEmpty : Bool {
+        return search.searchBar.text?.isEmpty ?? true  //variable computada
+    } // no termino de entender bien est parte
     var isFiltering : Bool {return search.isActive && !isSearchEmpty} // no termino de entender bien est parte
     var recibeSearch : String = ""
     var arrCards: [DataCard] = []
@@ -36,6 +38,7 @@ class CardsListViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.getAllCardsList()
+        print("ESTOY IMPRIMIN=ENDO")
     }
     
     //MARK: - W E B · S E R V I C E
@@ -43,11 +46,12 @@ class CardsListViewController: UIViewController {
         self.view.activityStartAnimating(activityColor: .white, backgroundColor: UIColor.black.withAlphaComponent(0.5))
         let cardsWS = Cards_WS()
         cardsWS.getCardResponse(withHandler:{ [weak self]respuesta, error in
-            guard let self = self else { return } //que estoy regresando aqui
+            guard let self = self
+            else { return } //CUIDA QUE SELF NO SEA NULO
             if error == nil {
-                self.arrMonsters = self.getAndSplitCard(with: respuesta?.dataCard ?? [], andType: "Normal Monster")// diferencia entre arr mosnter y arrcards
+                self.arrMonsters = self.getAndSplitCard(with: respuesta?.dataCard ?? [], andType: "Normal Monster")//opcional para optimzar memoria
                 self.arrCards.removeAll()
-                DispatchQueue.main.async {
+                DispatchQueue.main.async {  //llamar y buscar hilo principal ---- mandar instruccion para hacerlo de forma asincrona
                     self.cardListTable.reloadData()
                     self.view.activityStopAnimating()
                 }
